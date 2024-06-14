@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SyskonProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="Siemens.Digsi.Syskon">
+  <IEC61850Station>
+    <Name>IEC HINCAPIE</Name>
+    <Edition>31000</Edition>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\SIEMENS\IEC HINCAPIE\IEC HINCAPIE.scd</Path>
+  </IEC61850Station>
+  <IED>
+    <Name>F06_F002</Name>
+    <ObjectName>F06_F002</ObjectName>
+    <HierName>F06_F002</HierName>
+    <IedId>3eddfa3c-d537-4270-b1a7-924330895b25</IedId>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>C:\Users\Omar Vera\AppData\Local\Temp\x4ll0fc0.pp0\F06_F002.iid</Path>
+    <Date>2024-05-29T09:10:25.0486411-06:00</Date>
+    <NeedUpdate>false</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <IEDToolIdentifier>D5</IEDToolIdentifier>
+  </IED>
+  <IED>
+    <Name>F06_F003</Name>
+    <ObjectName>F06_F003</ObjectName>
+    <HierName>F06_F003</HierName>
+    <IedId>421f17c4-7571-472b-b7e5-91360560a62e</IedId>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>C:\Users\Omar Vera\AppData\Local\Temp\x4ll0fc0.pp0\F06_F003.iid</Path>
+    <Date>2024-05-29T09:10:28.0923494-06:00</Date>
+    <NeedUpdate>false</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <IEDToolIdentifier>D5</IEDToolIdentifier>
+  </IED>
+  <IED>
+    <Name>F06_F004</Name>
+    <ObjectName>F06_F004</ObjectName>
+    <HierName>F06_F004</HierName>
+    <IedId>f5d2f7d6-a880-4579-9c9b-28577eb53e85</IedId>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>C:\Users\Omar Vera\AppData\Local\Temp\x4ll0fc0.pp0\F06_F004.iid</Path>
+    <Date>2024-05-29T09:10:30.7898324-06:00</Date>
+    <NeedUpdate>false</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <IEDToolIdentifier>D5</IEDToolIdentifier>
+  </IED>
+  <IED>
+    <Name>F06_BCU</Name>
+    <ObjectName>F06_BCU</ObjectName>
+    <HierName>F06_BCU</HierName>
+    <IedId>f8cd30b0-5a13-40a6-85b3-a7a5f9bc9229</IedId>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>C:\Users\Omar Vera\AppData\Local\Temp\x4ll0fc0.pp0\F06_BCU.iid</Path>
+    <Date>2024-05-29T09:10:33.7875678-06:00</Date>
+    <NeedUpdate>false</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <IEDToolIdentifier>D5</IEDToolIdentifier>
+  </IED>
+  <GracefullyShutdown>false</GracefullyShutdown>
+  <ValidationNode>
+    <scdLastSavedDateTime>05/29/2024 09:10:51</scdLastSavedDateTime>
+  </ValidationNode>
+</SyskonProject>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rec:RecordOverview xmlLanguage="DCL" xmlLanguageVersion="V09.20.01">
+   <rec:RecordInfo deviceName="S.E. HINCAPIE" deviceType="7UT85-JAAA-AA0-0AAAA0-AH0111-12111A-CBB000-000AC0-CC1BA1-CB1" deviceId="BM2206010534" recordType="DR" numberOfRecords="1"/>
+   <rec:RecordEntry number="96" faultNumber="96" gridFaultNumber="1" recordSize="126441">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-01 00:11:23.276999950 +00:00 !L !F  N acc=31" durationTmms="1001000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="false" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="125" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="112061" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="680" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="13699" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+</rec:RecordOverview>
+

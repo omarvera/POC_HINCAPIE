@@ -1,0 +1,1343 @@
+
+                                                  (* ---------- Structure : QUAL ----------  *)
+TYPE QUAL:
+STRUCT
+       VAL   :  WORD;
+END_STRUCT;
+END_TYPE
+
+                                                  (* ---------- Structure : SDPS ----------  *)
+TYPE SDPS:
+STRUCT
+        DP   :  WORD;
+         Q   :  WORD;
+END_STRUCT;
+END_TYPE
+
+                                                  (* ---------- Structure : SSPS ----------  *)
+TYPE SSPS:
+STRUCT
+        SP   :  BOOL;
+         Q   :  WORD;
+END_STRUCT;
+END_TYPE
+
+                                                  (* ---------- Structure : ID_DPCC ----------  *)
+TYPE ID_DPCC:
+STRUCT
+       IDX   :  DINT;
+END_STRUCT;
+END_TYPE
+
+                                                  (* ---------- Structure : ID_DPCC2 ----------  *)
+TYPE ID_DPCC2:
+STRUCT
+       IDX   :  DINT;
+END_STRUCT;
+END_TYPE
+
+
+                                                  (* ---------- EV Function Block : OEXV_BO_SPS ----------  *)
+
+FUNCTION_BLOCK OEXV_BO_SPS
+VAR_INPUT
+        LNK :UINT := 0;
+        VAL :BOOL := 0;
+END_VAR
+VAR
+        INI :BOOL := 0;
+        LNKPTR :DINT := 0;
+END_VAR
+        GATE boSP
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- EV Function Block : IEXV_SPS_BO ----------  *)
+
+FUNCTION_BLOCK IEXV_SPS_BO
+VAR_INPUT
+        LNK :UINT := 0;
+END_VAR
+VAR_OUTPUT
+        VAL :BOOL;
+END_VAR
+VAR
+        INI :BOOL := 0;
+        LNKPTR :DINT := 0;
+END_VAR
+        GATE SPbo
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- EV Function Block : OEXV_SS_SPS ----------  *)
+
+FUNCTION_BLOCK OEXV_SS_SPS
+VAR_INPUT
+        LNK :UINT := 0;
+        VAL :SSPS;
+END_VAR
+VAR
+        INI :BOOL := 0;
+        LNKPTR :DINT := 0;
+END_VAR
+        GATE ssSP
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- EV Function Block : IEXV_SPS_SS ----------  *)
+
+FUNCTION_BLOCK IEXV_SPS_SS
+VAR_INPUT
+        LNK :UINT := 0;
+END_VAR
+VAR_OUTPUT
+        VAL :SSPS;
+END_VAR
+VAR
+        INI :BOOL := 0;
+        LNKPTR :DINT := 0;
+END_VAR
+        GATE SPss
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- EV Function Block : IEXV_DPC_DC ----------  *)
+
+FUNCTION_BLOCK IEXV_DPC_DC
+VAR_INPUT
+        ID_IN :ID_DPCC;
+END_VAR
+VAR_OUTPUT
+        IDOUT :ID_DPCC;
+END_VAR
+        IDOUT:= ID_IN;
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- EV Function Block : OEXV_DS_DPS ----------  *)
+
+FUNCTION_BLOCK OEXV_DS_DPS
+VAR_INPUT
+        LNK :UINT := 0;
+        VAL :SDPS;
+END_VAR
+VAR
+        INI :BOOL := 0;
+        LNKPTR :DINT := 0;
+END_VAR
+        GATE dsDP
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : OR10 ----------  *)
+
+FUNCTION_BLOCK OR10
+{
+     TICKS           := 2;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10268;
+     COMMENT         := 'OR';
+     NESTED          := NO;
+}
+VAR_INPUT
+        X1 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        X2 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        X3 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X4 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X5 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X6 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X7 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X8 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X9 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X10 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+END_VAR
+VAR_OUTPUT
+        Y { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+END_VAR
+Y:= X1 OR X2 OR X3 OR X4 OR X5 OR X6 OR X7 OR X8 OR X9 OR X10;
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : CONNECT ----------  *)
+
+FUNCTION_BLOCK CONNECT
+{
+     TICKS           := 0;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10307;
+     COMMENT         := 'CONNECT';
+     NESTED          := NO;
+}
+VAR_INPUT
+        IN { TICKS := 0; VISIBLE := YES;}:SSPS;
+END_VAR
+VAR_OUTPUT
+        OUT { TICKS := 0; VISIBLE := YES;}:SSPS;
+END_VAR
+OUT.SP:= IN.SP; OUT.Q:= IN.Q;
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : AND10 ----------  *)
+
+FUNCTION_BLOCK AND10
+{
+     TICKS           := 2;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10264;
+     COMMENT         := 'AND';
+     NESTED          := NO;
+}
+VAR_INPUT
+        X1 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        X2 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        X3 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+        X4 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+        X5 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+        X6 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+        X7 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+        X8 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+        X9 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+        X10 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+END_VAR
+VAR_OUTPUT
+        Y { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+END_VAR
+Y:= X1 AND X2 AND X3 AND X4 AND X5 AND X6 AND X7 AND X8 AND X9 AND X10;
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : DPC_DEF ----------  *)
+
+FUNCTION_BLOCK DPC_DEF
+{
+     TICKS           := 0;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10313;
+     COMMENT         := 'DPC_DEF';
+     NESTED          := NO;
+}
+VAR_INPUT
+        ID { TICKS := 0; VISIBLE := YES;}:ID_DPCC;
+        EN_I { TICKS := 0; VISIBLE := YES;}:BOOL := 1;
+        VAL { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        SELECT { TICKS := 0; VISIBLE := YES;}:UINT := 0;
+        OPERATE { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        TRIG { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        EDGE { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        ORIGIN { TICKS := 0; VISIBLE := YES;}:UINT := 5;
+END_VAR
+VAR_OUTPUT
+        ID_OUT { TICKS := 0; VISIBLE := YES;}:ID_DPCC2;
+        EN_O { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+END_VAR
+VAR
+     INI : BOOL  :=  0;
+     PLNK : DINT  :=  0;
+     ACID : UINT  :=  0;
+     TRGOLD : BOOL  :=  0;
+END_VAR
+     GATE DPDF
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : DPC_EXE ----------  *)
+
+FUNCTION_BLOCK DPC_EXE
+{
+     TICKS           := 0;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10314;
+     COMMENT         := 'DPC_EXE';
+     NESTED          := NO;
+}
+VAR_INPUT
+        ID { TICKS := 0; VISIBLE := YES;}:ID_DPCC2;
+        EN_I { TICKS := 0; VISIBLE := YES;}:BOOL := 1;
+        CANCEL { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        REL_EQ { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        REL_DBL { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        REL_PROT { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        REL_PLBY { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        REL_ILOC { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        RQ_SYNC { TICKS := 0; VISIBLE := YES;}:BOOL := 1;
+        PT { TICKS := 0; VISIBLE := YES;}:UINT := 10;
+END_VAR
+VAR_OUTPUT
+        EN_O { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        ACTIVE { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        SEL_OK { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        OK { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        ERR { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+END_VAR
+VAR
+     INI : BOOL  :=  0;
+     PLNK : DINT  :=  0;
+     ACID : UINT  :=  0;
+END_VAR
+     GATE DPEX
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : R_TRIG ----------  *)
+
+FUNCTION_BLOCK R_TRIG
+{
+     TICKS           := 0;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10263;
+     COMMENT         := 'R_TRIG';
+     NESTED          := NO;
+}
+VAR_INPUT
+        CLK { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+END_VAR
+VAR_OUTPUT
+        Q { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+END_VAR
+VAR
+     INI : BOOL  :=  0;
+     OCL : BOOL  :=  0;
+END_VAR
+     GATE RTRG
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : BUILD_Q ----------  *)
+
+FUNCTION_BLOCK BUILD_Q
+{
+     TICKS           := 0;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10245;
+     COMMENT         := 'BUILD_Q';
+     NESTED          := NO;
+}
+VAR_INPUT
+        GOOD { TICKS := 0; VISIBLE := YES;}:BOOL := 1;
+        BAD { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+END_VAR
+VAR_OUTPUT
+        QL { TICKS := 0; VISIBLE := YES;}:QUAL;
+END_VAR
+VAR
+     INI : BOOL  :=  0;
+END_VAR
+     GATE BQL2
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : BUILD_DPS ----------  *)
+
+FUNCTION_BLOCK BUILD_DPS
+{
+     TICKS           := 1;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10244;
+     COMMENT         := 'BUILD_DPS';
+     NESTED          := NO;
+}
+VAR_INPUT
+        IS_ON { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        IS_OFF { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        BAD_00 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        QL { TICKS := 0; VISIBLE := YES;}:QUAL;
+END_VAR
+VAR_OUTPUT
+        OUT { TICKS := 0; VISIBLE := YES;}:SDPS;
+END_VAR
+VAR
+     INI : BOOL  :=  0;
+END_VAR
+     GATE BDPS
+END_FUNCTION_BLOCK
+
+
+
+                                                  (* ---------- Function Block : NOR10 ----------  *)
+
+FUNCTION_BLOCK NOR10
+{
+     TICKS           := 3;
+     GENERIC         := NO;
+     BLOCKVIEW       := BIG;
+     SYSTIMER        := 0;
+     FF_MEMO_MEM     := 0;
+     HELPID          := 10267;
+     COMMENT         := 'NOR';
+     NESTED          := NO;
+}
+VAR_INPUT
+        X1 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        X2 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+        X3 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X4 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X5 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X6 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X7 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X8 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X9 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+        X10 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+END_VAR
+VAR_OUTPUT
+        Y { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+END_VAR
+Y:= NOT (X1 OR X2 OR X3 OR X4 OR X5 OR X6 OR X7 OR X8 OR X9 OR X10);
+END_FUNCTION_BLOCK
+
+
+
+
+
+                                                  (* ---------- Program : CHART_cb99d6b0_8022_43df_aff7_219f2bfcb633 ----------  *)
+
+PROGRAM CHART_cb99d6b0_8022_43df_aff7_219f2bfcb633
+{COMMENT := "Lógico Falla PTs";DESC := "";}
+(* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+(* PartitionInfo;Id := 1,Name := Partition_1,Comment :=     *)
+VAR
+
+
+
+     (* IO_IOVISIBILITY;OR10_1;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_1;1  *)
+OR10_1          { COMMENT := 'or10_1'; POSITION := 69,7; SIZE := 12, 12; } :OR10;         
+
+
+     (* IO_IOVISIBILITY;OR10_2;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_2;1  *)
+OR10_2          { COMMENT := 'or10_2'; POSITION := 69,19; SIZE := 12, 12; } :OR10;         
+
+     (* 0008 - F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.VTmcb *)
+     EXV_SPS_0008   {COMMENT := "F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.VTmcb";DESC := "0##Application#Power system#TP B1 69kV V-3ph#VT miniatureCB#>Open##1";}:OEXV_BO_SPS;
+
+     (* 0009 - F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.MCB *)
+     EXV_SPS_0009   {COMMENT := "F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.MCB";DESC := "0##Application#Power system#TP B1 69kV V-3ph#VT miniatureCB#Falla MCB PT Bus1 69 PCyM##1";}:IEXV_SPS_BO;
+
+     (* 0010 - F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.MCB2 *)
+     EXV_SPS_0010   {COMMENT := "F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.MCB2";DESC := "0##Application#Power system#TP B 13.8kV V-1ph#VT miniatureCB#Falla MCB PT 13.8kV PCyM##1";}:IEXV_SPS_BO;
+
+     (* 0011 - F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.VTmcb *)
+     EXV_SPS_0011   {COMMENT := "F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.VTmcb";DESC := "0##Application#Power system#TP B 13.8kV V-1ph#VT miniatureCB#>Open##1";}:OEXV_BO_SPS;
+
+     (* 0012 - F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.MCB1 *)
+     EXV_SPS_0012   {COMMENT := "F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.MCB1";DESC := "0##Application#Power system#TP B1 69kV V-3ph#VT miniatureCB#Falla MCB PT Bus1 69 Dev 3##1";}:IEXV_SPS_BO;
+
+     (* 0013 - F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.MCB3 *)
+     EXV_SPS_0013   {COMMENT := "F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.MCB3";DESC := "0##Application#Power system#TP B 13.8kV V-1ph#VT miniatureCB#Falla MCB 13.8kV Dev 3##1";}:IEXV_SPS_BO;
+END_VAR
+
+     EXV_SPS_0009        (LNK := 9);
+
+     EXV_SPS_0010        (LNK := 10);
+
+     EXV_SPS_0012        (LNK := 12);
+
+     EXV_SPS_0013        (LNK := 13);
+
+     OR10_1              (X1 := EXV_SPS_0009.VAL(* POSITION := -1*-1: SIZE := 48* -1:   *) ,
+                          X2 := EXV_SPS_0012.VAL(* POSITION := -1*-1: SIZE := 49* -1:   *) ,
+                          X3 := 0,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     OR10_2              (X1 := EXV_SPS_0010.VAL(* POSITION := -1*-1: SIZE := 48* -1:   *) ,
+                          X2 := EXV_SPS_0013.VAL(* POSITION := -1*-1: SIZE := 47* -1:   *) ,
+                          X3 := 0,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     EXV_SPS_0008        (LNK := 8,
+                          VAL := OR10_1.Y(* POSITION := -1*-1: SIZE := 38* -1:   *) );
+     EXV_SPS_0011        (LNK := 11,
+                          VAL := OR10_2.Y(* POSITION := -1*-1: SIZE := 39* -1:   *) );
+
+(* COMMENT_TEXT;{X=62,Y=2};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;FALLA PT's 69kV *)
+(* COMMENT_TEXT;{X=62,Y=14};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;FALLA PT's 13.8kV *)
+
+END_PROGRAM
+
+                                                  (* ---------- Program : CHART_14eaf170_f04e_4aff_886c_0a81de022719 ----------  *)
+
+PROGRAM CHART_14eaf170_f04e_4aff_886c_0a81de022719
+{COMMENT := "Lógico Alarmas";DESC := "";}
+(* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+(* PartitionInfo;Id := 1,Name := Partition_1,Comment :=     *)
+VAR
+
+
+
+     (* IO_IOVISIBILITY;OR10_1;X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_1;1  *)
+OR10_1          { COMMENT := 'or10_1'; POSITION := 60,75; SIZE := 12, 12; } :OR10;         
+
+
+     (* IO_IOVISIBILITY;OR10_2;X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_2;1  *)
+OR10_2          { COMMENT := 'or10_2'; POSITION := 60,83; SIZE := 12, 12; } :OR10;         
+
+
+     (* IO_IOVISIBILITY;OR10_3;X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_3;1  *)
+OR10_3          { COMMENT := 'or10_3'; POSITION := 60,91; SIZE := 12, 12; } :OR10;         
+
+
+     (* IO_IOVISIBILITY;OR10_4;X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_4;1  *)
+OR10_4          { COMMENT := 'or10_4'; POSITION := 60,99; SIZE := 12, 12; } :OR10;         
+
+
+     (* IO_IOVISIBILITY;OR10_5;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_5;1  *)
+OR10_5          { COMMENT := 'or10_5'; POSITION := 60,107; SIZE := 12, 12; } :OR10;         
+
+               
+     (* PartitionInfo;PartitionID CONNECT_6;1  *)
+CONNECT_6       { COMMENT := 'connect_1'; POSITION := 70,8; SIZE := 12, 12; } :CONNECT;      
+
+               
+     (* PartitionInfo;PartitionID CONNECT_7;1  *)
+CONNECT_7       { COMMENT := 'connect_2'; POSITION := 70,14; SIZE := 12, 12; } :CONNECT;      
+
+               
+     (* PartitionInfo;PartitionID CONNECT_8;1  *)
+CONNECT_8       { COMMENT := 'connect_3'; POSITION := 70,20; SIZE := 12, 12; } :CONNECT;      
+
+               
+     (* PartitionInfo;PartitionID CONNECT_9;1  *)
+CONNECT_9       { COMMENT := 'connect_4'; POSITION := 70,26; SIZE := 12, 12; } :CONNECT;      
+
+               
+     (* PartitionInfo;PartitionID CONNECT_10;1  *)
+CONNECT_10      { COMMENT := 'connect_5'; POSITION := 70,32; SIZE := 12, 12; } :CONNECT;      
+
+
+     (* IO_IOVISIBILITY;AND10_11;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID AND10_11;1  *)
+AND10_11        { COMMENT := 'and10_1'; POSITION := 80,75; SIZE := 12, 12; } :AND10;        
+
+
+     (* IO_IOVISIBILITY;AND10_12;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID AND10_12;1  *)
+AND10_12        { COMMENT := 'and10_2'; POSITION := 80,83; SIZE := 12, 12; } :AND10;        
+
+
+     (* IO_IOVISIBILITY;AND10_13;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID AND10_13;1  *)
+AND10_13        { COMMENT := 'and10_3'; POSITION := 80,91; SIZE := 12, 12; } :AND10;        
+
+
+     (* IO_IOVISIBILITY;AND10_14;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID AND10_14;1  *)
+AND10_14        { COMMENT := 'and10_4'; POSITION := 80,99; SIZE := 12, 12; } :AND10;        
+
+     (* 0014 - F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB0_TDIFF.FctBlk *)
+     EXV_SPS_0014   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB0_TDIFF.FctBlk";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#General#Estado 87T##1";}:OEXV_SS_SPS;
+
+     (* 0015 - F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Blk *)
+     EXV_SPS_0015   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Blk";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF#>Block stage##1";}:IEXV_SPS_SS;
+
+     (* 0016 - F06_F003.Application.FG1_Breaker_3pol.FB1_STCS_2BI.Failure *)
+     EXV_SPS_0016   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_STCS_2BI.Failure";DESC := "0##Application#Interruptor HV#74TC - SBD2#Trip-circuit failure##1";}:IEXV_SPS_SS;
+
+     (* 0017 - F06_F003.Application.FG1_UserDef.FB6_Universal.ColAlm *)
+     EXV_SPS_0017   {COMMENT := "F06_F003.Application.FG1_UserDef.FB6_Universal.ColAlm";DESC := "0##Application#Usuario#SCBR2#Falla SCD2##1";}:OEXV_SS_SPS;
+
+     (* 0018 - F06_F003.Application.LTMS_Application.TmSynErr *)
+     EXV_SPS_0018   {COMMENT := "F06_F003.Application.LTMS_Application.TmSynErr";DESC := "0##Application#Time sync.#Time sync. error##1";}:IEXV_SPS_SS;
+
+     (* 0019 - F06_F003.Application.FG1_UserDef.FB7_Universal.TmSynErr *)
+     EXV_SPS_0019   {COMMENT := "F06_F003.Application.FG1_UserDef.FB7_Universal.TmSynErr";DESC := "0##Application#Usuario#LTMS0#Falla Sincronización##1";}:OEXV_SS_SPS;
+
+     (* 0020 - F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Op.ACTGeneral *)
+     EXV_SPS_0020   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Op.ACTGeneral";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF#Operate#general##1";}:IEXV_SPS_SS;
+
+     (* 0021 - F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_FastUnrestrained.Op.ACTGeneral *)
+     EXV_SPS_0021   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_FastUnrestrained.Op.ACTGeneral";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF fast#Operate#general##1";}:IEXV_SPS_SS;
+
+     (* 0022 - F06_F003.Application.FG1_UserDef.FB8_Universal.Op *)
+     EXV_SPS_0022   {COMMENT := "F06_F003.Application.FG1_UserDef.FB8_Universal.Op";DESC := "0##Application#Usuario#PDIF_PTRC1#Opero I-DIFF##1";}:OEXV_SS_SPS;
+
+     (* 0023 - F06_F003.Application.FG1_UserDef.FB9_Universal.Op *)
+     EXV_SPS_0023   {COMMENT := "F06_F003.Application.FG1_UserDef.FB9_Universal.Op";DESC := "0##Application#Usuario#PDIF_PTRC2#OperoI -DIFF fast##1";}:OEXV_SS_SPS;
+
+     (* 0024 - F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrA *)
+     EXV_SPS_0024   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrA";DESC := "0##Application#Interruptor HV#Trip logic#Disparo Fase A##1";}:OEXV_BO_SPS;
+
+     (* 0025 - F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrB *)
+     EXV_SPS_0025   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrB";DESC := "0##Application#Interruptor HV#Trip logic#Disparo Fase B##1";}:OEXV_BO_SPS;
+
+     (* 0026 - F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrC *)
+     EXV_SPS_0026   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrC";DESC := "0##Application#Interruptor HV#Trip logic#Disparo Fase C##1";}:OEXV_BO_SPS;
+
+     (* 0027 - F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrN *)
+     EXV_SPS_0027   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrN";DESC := "0##Application#Interruptor HV#Trip logic#Disparo Neutro##1";}:OEXV_BO_SPS;
+
+     (* 0028 - F06_F003.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL1 *)
+     EXV_SPS_0028   {COMMENT := "F06_F003.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL1";DESC := "0##Application#Transformador HV#Group indicat.#Pickup#phs A##1";}:IEXV_SPS_BO;
+
+     (* 0029 - F06_F003.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL2 *)
+     EXV_SPS_0029   {COMMENT := "F06_F003.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL2";DESC := "0##Application#Transformador HV#Group indicat.#Pickup#phs B##1";}:IEXV_SPS_BO;
+
+     (* 0030 - F06_F003.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL3 *)
+     EXV_SPS_0030   {COMMENT := "F06_F003.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL3";DESC := "0##Application#Transformador HV#Group indicat.#Pickup#phs C##1";}:IEXV_SPS_BO;
+
+     (* 0031 - F06_F003.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDNeut *)
+     EXV_SPS_0031   {COMMENT := "F06_F003.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDNeut";DESC := "0##Application#Transformador HV#Group indicat.#Pickup#gnd##1";}:IEXV_SPS_BO;
+
+     (* 0032 - F06_F003.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL1 *)
+     EXV_SPS_0032   {COMMENT := "F06_F003.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL1";DESC := "0##Application#Transformador LV#Group indicat.#Pickup#phs A##1";}:IEXV_SPS_BO;
+
+     (* 0033 - F06_F003.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL2 *)
+     EXV_SPS_0033   {COMMENT := "F06_F003.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL2";DESC := "0##Application#Transformador LV#Group indicat.#Pickup#phs B##1";}:IEXV_SPS_BO;
+
+     (* 0034 - F06_F003.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL3 *)
+     EXV_SPS_0034   {COMMENT := "F06_F003.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL3";DESC := "0##Application#Transformador LV#Group indicat.#Pickup#phs C##1";}:IEXV_SPS_BO;
+
+     (* 0035 - F06_F003.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDNeut *)
+     EXV_SPS_0035   {COMMENT := "F06_F003.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDNeut";DESC := "0##Application#Transformador LV#Group indicat.#Pickup#gnd##1";}:IEXV_SPS_BO;
+
+     (* 0036 - F06_F003.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL1 *)
+     EXV_SPS_0036   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL1";DESC := "0##Application#Transformer diff. 1#Group indicat.#Pickup#phs A##1";}:IEXV_SPS_BO;
+
+     (* 0037 - F06_F003.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL2 *)
+     EXV_SPS_0037   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL2";DESC := "0##Application#Transformer diff. 1#Group indicat.#Pickup#phs B##1";}:IEXV_SPS_BO;
+
+     (* 0038 - F06_F003.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL3 *)
+     EXV_SPS_0038   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL3";DESC := "0##Application#Transformer diff. 1#Group indicat.#Pickup#phs C##1";}:IEXV_SPS_BO;
+
+     (* 0039 - F06_F003.Application.FG1_PowerTransformerStarpoint.FB1_PTRC_FGStandard.Str.ACDGeneral *)
+     EXV_SPS_0039   {COMMENT := "F06_F003.Application.FG1_PowerTransformerStarpoint.FB1_PTRC_FGStandard.Str.ACDGeneral";DESC := "0##Application#Transformer NT#Group indicat.#Pickup#general##1";}:IEXV_SPS_BO;
+
+     (* 0040 - F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral *)
+     EXV_SPS_0040   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral";DESC := "0##Application#Interruptor HV#Trip logic#Trip indication#general##1";}:IEXV_SPS_BO;
+
+     (* 0041 - F06_F003.Application.FG2_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral *)
+     EXV_SPS_0041   {COMMENT := "F06_F003.Application.FG2_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral";DESC := "0##Application#Interruptor LV#Trip logic#Trip indication#general##1";}:IEXV_SPS_BO;
+END_VAR
+
+     EXV_SPS_0015        (LNK := 15);
+
+     EXV_SPS_0016        (LNK := 16);
+
+     EXV_SPS_0018        (LNK := 18);
+
+     EXV_SPS_0020        (LNK := 20);
+
+     EXV_SPS_0021        (LNK := 21);
+
+     EXV_SPS_0028        (LNK := 28);
+
+     EXV_SPS_0029        (LNK := 29);
+
+     EXV_SPS_0030        (LNK := 30);
+
+     EXV_SPS_0031        (LNK := 31);
+
+     EXV_SPS_0032        (LNK := 32);
+
+     EXV_SPS_0033        (LNK := 33);
+
+     EXV_SPS_0034        (LNK := 34);
+
+     EXV_SPS_0035        (LNK := 35);
+
+     EXV_SPS_0036        (LNK := 36);
+
+     EXV_SPS_0037        (LNK := 37);
+
+     EXV_SPS_0038        (LNK := 38);
+
+     EXV_SPS_0039        (LNK := 39);
+
+     EXV_SPS_0040        (LNK := 40);
+
+     EXV_SPS_0041        (LNK := 41);
+
+     OR10_1              (X1 := EXV_SPS_0028.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          X2 := EXV_SPS_0032.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          X3 := EXV_SPS_0036.VAL(* POSITION := -1*-1: SIZE := 37* -1:   *) ,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     OR10_2              (X1 := EXV_SPS_0029.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          X2 := EXV_SPS_0033.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          X3 := EXV_SPS_0037.VAL(* POSITION := -1*-1: SIZE := 37* -1:   *) ,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     OR10_3              (X1 := EXV_SPS_0030.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          X2 := EXV_SPS_0034.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          X3 := EXV_SPS_0038.VAL(* POSITION := -1*-1: SIZE := 37* -1:   *) ,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     OR10_4              (X1 := EXV_SPS_0031.VAL(* POSITION := -1*-1: SIZE := 34* -1:   *) ,
+                          X2 := EXV_SPS_0035.VAL(* POSITION := -1*-1: SIZE := 34* -1:   *) ,
+                          X3 := EXV_SPS_0039.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     OR10_5              (X1 := EXV_SPS_0040.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+                          X2 := EXV_SPS_0041.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+                          X3 := 0,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+
+
+
+     CONNECT_6           (IN := EXV_SPS_0015.VAL(* POSITION := -1*-1: SIZE := 41* -1:   *) );
+
+     CONNECT_7           (IN := EXV_SPS_0016.VAL(* POSITION := -1*-1: SIZE := 36* -1:   *) );
+
+     CONNECT_8           (IN := EXV_SPS_0018.VAL(* POSITION := -1*-1: SIZE := 26* -1:   *) );
+
+     CONNECT_9           (IN := EXV_SPS_0020.VAL(* POSITION := -1*-1: SIZE := 43* -1:   *) );
+
+     CONNECT_10          (IN := EXV_SPS_0021.VAL(* POSITION := -1*-1: SIZE := 45* -1:   *) );
+
+     AND10_11            (X1 := OR10_1.Y,
+                          X2 := OR10_5.Y,
+                          X3 := 1,
+                          X4 := 1,
+                          X5 := 1,
+                          X6 := 1,
+                          X7 := 1,
+                          X8 := 1,
+                          X9 := 1,
+                          X10 := 1);
+
+     AND10_12            (X1 := OR10_2.Y,
+                          X2 := OR10_5.Y,
+                          X3 := 1,
+                          X4 := 1,
+                          X5 := 1,
+                          X6 := 1,
+                          X7 := 1,
+                          X8 := 1,
+                          X9 := 1,
+                          X10 := 1);
+
+     AND10_13            (X1 := OR10_3.Y,
+                          X2 := OR10_5.Y,
+                          X3 := 1,
+                          X4 := 1,
+                          X5 := 1,
+                          X6 := 1,
+                          X7 := 1,
+                          X8 := 1,
+                          X9 := 1,
+                          X10 := 1);
+
+     AND10_14            (X1 := OR10_4.Y,
+                          X2 := OR10_5.Y,
+                          X3 := 1,
+                          X4 := 1,
+                          X5 := 1,
+                          X6 := 1,
+                          X7 := 1,
+                          X8 := 1,
+                          X9 := 1,
+                          X10 := 1);
+
+     EXV_SPS_0014        (LNK := 14,
+                          VAL := CONNECT_6.OUT(* POSITION := -1*-1: SIZE := 41* -1:   *) );
+     EXV_SPS_0017        (LNK := 17,
+                          VAL := CONNECT_7.OUT(* POSITION := -1*-1: SIZE := 25* -1:   *) );
+     EXV_SPS_0019        (LNK := 19,
+                          VAL := CONNECT_8.OUT(* POSITION := -1*-1: SIZE := 30* -1:   *) );
+     EXV_SPS_0022        (LNK := 22,
+                          VAL := CONNECT_9.OUT(* POSITION := -1*-1: SIZE := 28* -1:   *) );
+     EXV_SPS_0023        (LNK := 23,
+                          VAL := CONNECT_10.OUT(* POSITION := -1*-1: SIZE := 31* -1:   *) );
+     EXV_SPS_0024        (LNK := 24,
+                          VAL := AND10_11.Y(* POSITION := -1*-1: SIZE := 33* -1:   *) );
+     EXV_SPS_0025        (LNK := 25,
+                          VAL := AND10_12.Y(* POSITION := -1*-1: SIZE := 33* -1:   *) );
+     EXV_SPS_0026        (LNK := 26,
+                          VAL := AND10_13.Y(* POSITION := -1*-1: SIZE := 33* -1:   *) );
+     EXV_SPS_0027        (LNK := 27,
+                          VAL := AND10_14.Y(* POSITION := -1*-1: SIZE := 33* -1:   *) );
+
+(* COMMENT_TEXT;{X=61,Y=1};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;ALARMAS F003 *)
+(* COMMENT_TEXT;{X=58,Y=71};{Width=34, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;DISPAROS POR FASES *)
+
+END_PROGRAM
+
+                                                  (* ---------- Program : CHART_1fa93baf_98dd_4234_8177_7853c6e69c1d ----------  *)
+
+PROGRAM CHART_1fa93baf_98dd_4234_8177_7853c6e69c1d
+{COMMENT := "Lógico Sincronismo";DESC := "";}
+(* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+(* PartitionInfo;Id := 1,Name := Partition_1,Comment :=      *)
+VAR
+
+
+
+     (* IO_IOVISIBILITY;AND10_1;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID AND10_1;1  *)
+AND10_1         { COMMENT := 'and10_2'; POSITION := 42,23; SIZE := 12, 12; } :AND10;        
+
+
+     (* IO_IOVISIBILITY;AND10_2;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID AND10_2;1  *)
+AND10_2         { COMMENT := 'and10_1'; POSITION := 42,14; SIZE := 12, 12; } :AND10;        
+
+               
+     (* PartitionInfo;PartitionID DPC_DEF_3;1  *)
+DPC_DEF_3       { COMMENT := 'dpc_def_1'; POSITION := 61,9; SIZE := 12, 12; } :DPC_DEF;      
+
+               
+     (* PartitionInfo;PartitionID DPC_EXE_4;1  *)
+DPC_EXE_4       { COMMENT := 'dpc_exe_1'; POSITION := 80,9; SIZE := 12, 12; } :DPC_EXE;      
+
+     (* 0042 - F06_F003.Application.FG1_Breaker_3pol.FB1_CSWI.Pos *)
+     EXV_DPC_0042   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_CSWI.Pos";DESC := "0##Application#Interruptor HV#Control#Cmd. with feedback##1";}:IEXV_DPC_DC;
+
+     (* 0043 - F06_F003.Application.FG1_UserDef.FB4_Universal.OpCls0 *)
+     EXV_SPS_0043   {COMMENT := "F06_F003.Application.FG1_UserDef.FB4_Universal.OpCls0";DESC := "0##Application#Usuario#GGIO1#Cierre Manual Q0##1";}:IEXV_SPS_BO;
+
+     (* 0044 - F06_F003.Application.FG1_UserDef.FB2_Universal.FailDiagDS *)
+     EXV_SPS_0044   {COMMENT := "F06_F003.Application.FG1_UserDef.FB2_Universal.FailDiagDS";DESC := "0##Application#Usuario#GOOSE#Anormalidad F06_BCU##1";}:IEXV_SPS_BO;
+
+     (* 0045 - F06_F003.Application.FG1_ComSupervision.FN1_GOOSESupervision.FB1_LGOS.St *)
+     EXV_SPS_0045   {COMMENT := "F06_F003.Application.FG1_ComSupervision.FN1_GOOSESupervision.FB1_LGOS.St";DESC := "0##Application#Com. supervision#GOOSE supervis.#Subscription_F002#Status subscription##1";}:IEXV_SPS_BO;
+END_VAR
+
+     EXV_DPC_0042        (ID_IN.IDX := 42);
+
+     EXV_SPS_0043        (LNK := 43);
+
+     EXV_SPS_0044        (LNK := 44);
+
+     EXV_SPS_0045        (LNK := 45);
+
+     AND10_1             (X1 := EXV_SPS_0044.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+                          X2 := EXV_SPS_0045.VAL(* POSITION := -1*-1: SIZE := 48* -1:   *) ,
+                          X3 := 1,
+                          X4 := 1,
+                          X5 := 1,
+                          X6 := 1,
+                          X7 := 1,
+                          X8 := 1,
+                          X9 := 1,
+                          X10 := 1);
+
+     AND10_2             (X1 := EXV_SPS_0043.VAL(* POSITION := -1*-1: SIZE := 28* -1:   *) ,
+                          X2 := AND10_1.Y,
+                          X3 := 1,
+                          X4 := 1,
+                          X5 := 1,
+                          X6 := 1,
+                          X7 := 1,
+                          X8 := 1,
+                          X9 := 1,
+                          X10 := 1);
+
+     DPC_DEF_3           (ID := EXV_DPC_0042.IDOUT(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          EN_I := 1,
+                          VAL := 1,
+                          SELECT := 2,
+                          OPERATE := 1,
+                          TRIG := AND10_2.Y,
+                          EDGE := 0,
+                          ORIGIN := 5);
+
+
+     DPC_EXE_4           (ID := DPC_DEF_3.ID_OUT,
+                          EN_I := DPC_DEF_3.EN_O,
+                          CANCEL := 0,
+                          REL_EQ := 0,
+                          REL_DBL := 0,
+                          REL_PROT := 1,
+                          REL_PLBY := 0,
+                          REL_ILOC := 1,
+                          RQ_SYNC := 1,
+                          PT := 10);
+
+(* COMMENT_TEXT;{X=64,Y=1};{Width=27, Height=5};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;VERIFICACIÓN SINCRONISMO *)
+
+END_PROGRAM
+
+                                                  (* ---------- Program : CHART_d47ea494_be4e_4bf8_a6a4_0015a772ab46 ----------  *)
+
+PROGRAM CHART_d47ea494_be4e_4bf8_a6a4_0015a772ab46
+{COMMENT := "Lógico 50BF";DESC := "";}
+(* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+(* PartitionInfo;Id := 1,Name := Partition_1,Comment :=     *)
+VAR
+
+
+
+     (* IO_IOVISIBILITY;OR10_1;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_1;1  *)
+OR10_1          { COMMENT := 'or10_1'; POSITION := 68,6; SIZE := 12, 12; } :OR10;         
+
+     (* 0046 - F06_F003.Application.FG1_Breaker_3pol.FB1_RBRF_Adv_3pol.Initiation *)
+     EXV_SPS_0046   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_RBRF_Adv_3pol.Initiation";DESC := "0##Application#Interruptor HV#50BF#>Start##1";}:OEXV_BO_SPS;
+
+     (* 0047 - F06_F003.Application.FG1_UserDef.FB4_Universal.Init3p *)
+     EXV_SPS_0047   {COMMENT := "F06_F003.Application.FG1_UserDef.FB4_Universal.Init3p";DESC := "0##Application#Usuario#GGIO1#Arranque 50BF F002##1";}:IEXV_SPS_BO;
+
+     (* 0048 - F06_F003.Application.FG1_UserDef.FB4_Universal.OpEx86 *)
+     EXV_SPS_0048   {COMMENT := "F06_F003.Application.FG1_UserDef.FB4_Universal.OpEx86";DESC := "0##Application#Usuario#GGIO1#Opero 86T##1";}:IEXV_SPS_BO;
+END_VAR
+
+     EXV_SPS_0047        (LNK := 47);
+
+     EXV_SPS_0048        (LNK := 48);
+
+     OR10_1              (X1 := EXV_SPS_0047.VAL(* POSITION := -1*-1: SIZE := 29* -1:   *) ,
+                          X2 := EXV_SPS_0048.VAL(* POSITION := -1*-1: SIZE := 25* -1:   *) ,
+                          X3 := 0,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     EXV_SPS_0046        (LNK := 46,
+                          VAL := OR10_1.Y(* POSITION := -1*-1: SIZE := 26* -1:   *) );
+
+(* COMMENT_TEXT;{X=60,Y=1};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;ARRANQUE 50BF *)
+
+END_PROGRAM
+
+                                                  (* ---------- Program : CHART_43ec1f9d_1978_4ae0_a4d3_6a2d79fc42ef ----------  *)
+
+PROGRAM CHART_43ec1f9d_1978_4ae0_a4d3_6a2d79fc42ef
+{COMMENT := "Lógico Oscilografía";DESC := "";}
+(* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+(* PartitionInfo;Id := 1,Name := Partition_1,Comment :=     *)
+VAR
+
+
+               
+     (* PartitionInfo;PartitionID R_TRIG_1;1  *)
+R_TRIG_1        { COMMENT := 'r_trig_1'; POSITION := 47,9; SIZE := 12, 12; } :R_TRIG;       
+
+               
+     (* PartitionInfo;PartitionID R_TRIG_2;1  *)
+R_TRIG_2        { COMMENT := 'r_trig_2'; POSITION := 47,14; SIZE := 12, 12; } :R_TRIG;       
+
+               
+     (* PartitionInfo;PartitionID R_TRIG_3;1  *)
+R_TRIG_3        { COMMENT := 'r_trig_3'; POSITION := 47,19; SIZE := 12, 12; } :R_TRIG;       
+
+               
+     (* PartitionInfo;PartitionID R_TRIG_4;1  *)
+R_TRIG_4        { COMMENT := 'r_trig_4'; POSITION := 47,24; SIZE := 12, 12; } :R_TRIG;       
+
+
+     (* IO_IOVISIBILITY;OR10_5;X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_5;1  *)
+OR10_5          { COMMENT := 'or10_1'; POSITION := 72,9; SIZE := 12, 12; } :OR10;         
+
+
+     (* IO_IOVISIBILITY;AND10_6;X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID AND10_6;1  *)
+AND10_6         { COMMENT := 'and10_1'; POSITION := 92,9; SIZE := 12, 12; } :AND10;        
+
+
+     (* IO_IOVISIBILITY;OR10_7;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_7;1  *)
+OR10_7          { COMMENT := 'or10_2'; POSITION := 67,41; SIZE := 12, 12; } :OR10;         
+
+     (* 0049 - F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral *)
+     EXV_SPS_0049   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral";DESC := "0##Application#Interruptor HV#Trip logic#Trip indication#general##1";}:IEXV_SPS_BO;
+
+     (* 0050 - F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff *)
+     EXV_SPS_0050   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff";DESC := "0##Application#Interruptor HV#Circuit break.#Position#open##1";}:IEXV_SPS_BO;
+
+     (* 0051 - F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOn *)
+     EXV_SPS_0051   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOn";DESC := "0##Application#Interruptor HV#Circuit break.#Position#closed##1";}:IEXV_SPS_BO;
+
+     (* 0052 - F06_F003.Application.FG1_Recording.FN1_Recorder_DEF.FB1_RDRE_DEF.StrExt *)
+     EXV_SPS_0052   {COMMENT := "F06_F003.Application.FG1_Recording.FN1_Recorder_DEF.FB1_RDRE_DEF.StrExt";DESC := "0##Application#Recording#Fault recorder#Control#>External start##1";}:OEXV_BO_SPS;
+
+     (* 0053 - F06_F003.Application.FG2_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOn *)
+     EXV_SPS_0053   {COMMENT := "F06_F003.Application.FG2_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOn";DESC := "0##Application#Interruptor LV#Circuit break.#Position#closed##1";}:IEXV_SPS_BO;
+
+     (* 0054 - F06_F003.Application.FG2_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff *)
+     EXV_SPS_0054   {COMMENT := "F06_F003.Application.FG2_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff";DESC := "0##Application#Interruptor LV#Circuit break.#Position#open##1";}:IEXV_SPS_BO;
+
+     (* 0055 - F06_F003.Application.FG2_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral *)
+     EXV_SPS_0055   {COMMENT := "F06_F003.Application.FG2_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral";DESC := "0##Application#Interruptor LV#Trip logic#Trip indication#general##1";}:IEXV_SPS_BO;
+
+     (* 0056 - F06_F003.Application.FG1_UserDef.FB4_Universal.OpCls0 *)
+     EXV_SPS_0056   {COMMENT := "F06_F003.Application.FG1_UserDef.FB4_Universal.OpCls0";DESC := "0##Application#Usuario#GGIO1#Cierre Manual Q0##1";}:IEXV_SPS_BO;
+
+     (* 0057 - F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Inactive *)
+     EXV_SPS_0057   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Inactive";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF#Inactive##1";}:IEXV_SPS_BO;
+
+     (* 0058 - F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_FastUnrestrained.Inactive *)
+     EXV_SPS_0058   {COMMENT := "F06_F003.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_FastUnrestrained.Inactive";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF fast#Inactive##1";}:IEXV_SPS_BO;
+END_VAR
+
+     EXV_SPS_0049        (LNK := 49);
+
+     EXV_SPS_0050        (LNK := 50);
+
+     EXV_SPS_0051        (LNK := 51);
+
+     EXV_SPS_0053        (LNK := 53);
+
+     EXV_SPS_0054        (LNK := 54);
+
+     EXV_SPS_0055        (LNK := 55);
+
+     EXV_SPS_0056        (LNK := 56);
+
+     EXV_SPS_0057        (LNK := 57);
+
+     EXV_SPS_0058        (LNK := 58);
+
+     R_TRIG_1            (CLK := EXV_SPS_0050.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) );
+
+     R_TRIG_2            (CLK := EXV_SPS_0051.VAL(* POSITION := -1*-1: SIZE := 36* -1:   *) );
+
+     R_TRIG_3            (CLK := EXV_SPS_0053.VAL(* POSITION := -1*-1: SIZE := 36* -1:   *) );
+
+     R_TRIG_4            (CLK := EXV_SPS_0054.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) );
+
+     OR10_5              (X1 := R_TRIG_1.Q,
+                          X2 := R_TRIG_2.Q,
+                          X3 := R_TRIG_3.Q,
+                          X4 := R_TRIG_4.Q,
+                          X5 := EXV_SPS_0056.VAL(* POSITION := -1*-1: SIZE := 28* -1:   *) ,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     AND10_6             (X1 := OR10_5.Y,
+                          X2 := NOT EXV_SPS_0049.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+                          X3 := NOT EXV_SPS_0055.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+                          X4 := 1,
+                          X5 := 1,
+                          X6 := 1,
+                          X7 := 1,
+                          X8 := 1,
+                          X9 := 1,
+                          X10 := 1);
+
+     OR10_7              (X1 := EXV_SPS_0057.VAL(* POSITION := -1*-1: SIZE := 40* -1:   *) ,
+                          X2 := EXV_SPS_0058.VAL(* POSITION := -1*-1: SIZE := 42* -1:   *) ,
+                          X3 := 0,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+     EXV_SPS_0052        (LNK := 52,
+                          VAL := AND10_6.Y(* POSITION := -1*-1: SIZE := 37* -1:   *) );
+
+(* COMMENT_TEXT;{X=60,Y=1};{Width=29, Height=4};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;ARRANQUE OSCILOGRAFIA *)
+(* COMMENT_TEXT;{X=46,Y=33};{Width=27, Height=4};FontSize := 10,LineColor := 0,LineWidth := 0,Alignment := Near,AutoWrap := True,BackColor := 0,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;87T REF *)
+
+END_PROGRAM
+
+                                                  (* ---------- Program : CHART_c68e7009_e7ec_42ec_a4fd_a2113ea94766 ----------  *)
+
+PROGRAM CHART_c68e7009_e7ec_42ec_a4fd_a2113ea94766
+{COMMENT := "Lógico Posiciones";DESC := "";}
+(* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+(* PartitionInfo;Id := 1,Name := Partition_1,Comment :=     *)
+VAR
+
+
+
+     (* IO_IOVISIBILITY;OR10_1;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_1;1  *)
+OR10_1          { COMMENT := 'or10_5'; POSITION := 56,6; SIZE := 12, 12; } :OR10;         
+
+
+     (* IO_IOVISIBILITY;OR10_2;X3:X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID OR10_2;1  *)
+OR10_2          { COMMENT := 'or10_6'; POSITION := 56,13; SIZE := 12, 12; } :OR10;         
+
+               
+     (* PartitionInfo;PartitionID BUILD_Q_3;1  *)
+BUILD_Q_3       { COMMENT := 'build_q_1'; POSITION := 56,19; SIZE := 12, 12; } :BUILD_Q;      
+
+               
+     (* PartitionInfo;PartitionID BUILD_Q_4;1  *)
+BUILD_Q_4       { COMMENT := 'build_q_2'; POSITION := 57,38; SIZE := 12, 12; } :BUILD_Q;      
+
+               
+     (* PartitionInfo;PartitionID BUILD_DPS_5;1  *)
+BUILD_DPS_5     { COMMENT := 'build_dps_5'; POSITION := 79,6; SIZE := 12, 12; } :BUILD_DPS;    
+
+               
+     (* PartitionInfo;PartitionID BUILD_DPS_6;1  *)
+BUILD_DPS_6     { COMMENT := 'build_dps_1'; POSITION := 79,30; SIZE := 12, 12; } :BUILD_DPS;    
+
+     (* 0059 - F06_F003.Application.FG1_UserDef.FB2_Universal.RxPos1.DPS_StatusOn *)
+     EXV_SPS_0059   {COMMENT := "F06_F003.Application.FG1_UserDef.FB2_Universal.RxPos1.DPS_StatusOn";DESC := "0##Application#Usuario#GOOSE#Posicion 6T6-Q0#closed##1";}:IEXV_SPS_BO;
+
+     (* 0060 - F06_F003.Application.FG1_UserDef.FB2_Universal.RxPos1.DPS_StatusOff *)
+     EXV_SPS_0060   {COMMENT := "F06_F003.Application.FG1_UserDef.FB2_Universal.RxPos1.DPS_StatusOff";DESC := "0##Application#Usuario#GOOSE#Posicion 6T6-Q0#open##1";}:IEXV_SPS_BO;
+
+     (* 0061 - F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.XCBR1 *)
+     EXV_SPS_0061   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.XCBR1";DESC := "0##Application#Interruptor HV#Circuit break.#Q0 Cerrado##1";}:IEXV_SPS_BO;
+
+     (* 0062 - F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.Pos *)
+     EXV_DPS_0062   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.Pos";DESC := "0##Application#Interruptor HV#Circuit break.#Position##1";}:OEXV_DS_DPS;
+
+     (* 0063 - F06_F003.Application.FG1_UserDef.FB2_Universal.RxPos.DPS_StatusOn *)
+     EXV_SPS_0063   {COMMENT := "F06_F003.Application.FG1_UserDef.FB2_Universal.RxPos.DPS_StatusOn";DESC := "0##Application#Usuario#GOOSE#Posicion 9T7-Q0#closed##1";}:IEXV_SPS_BO;
+
+     (* 0064 - F06_F003.Application.FG2_Breaker_3pol.FB1_XCBR.Pos *)
+     EXV_DPS_0064   {COMMENT := "F06_F003.Application.FG2_Breaker_3pol.FB1_XCBR.Pos";DESC := "0##Application#Interruptor LV#Circuit break.#Position##1";}:OEXV_DS_DPS;
+END_VAR
+
+     EXV_SPS_0059        (LNK := 59);
+
+     EXV_SPS_0060        (LNK := 60);
+
+     EXV_SPS_0061        (LNK := 61);
+
+     EXV_SPS_0063        (LNK := 63);
+
+     OR10_1              (X1 := EXV_SPS_0059.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+                          X2 := EXV_SPS_0061.VAL(* POSITION := -1*-1: SIZE := 33* -1:   *) ,
+                          X3 := 0,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     OR10_2              (X1 := NOT EXV_SPS_0061.VAL(* POSITION := -1*-1: SIZE := 33* -1:   *) ,
+                          X2 := EXV_SPS_0060.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+                          X3 := 0,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     BUILD_Q_3           (GOOD := 1,
+                          BAD := 0);
+
+     BUILD_Q_4           (GOOD := 1,
+                          BAD := 0);
+
+     BUILD_DPS_5         (IS_ON := OR10_1.Y,
+                          IS_OFF := OR10_2.Y,
+                          BAD_00 := 0,
+                          QL := BUILD_Q_3.QL);
+
+     BUILD_DPS_6         (IS_ON := EXV_SPS_0063.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+                          IS_OFF := NOT EXV_SPS_0063.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+                          BAD_00 := 0,
+                          QL := BUILD_Q_4.QL);
+
+     EXV_DPS_0062        (LNK := 62,
+                          VAL := BUILD_DPS_5.OUT(* POSITION := -1*-1: SIZE := 32* -1:   *) );
+     EXV_DPS_0064        (LNK := 64,
+                          VAL := BUILD_DPS_6.OUT(* POSITION := -1*-1: SIZE := 32* -1:   *) );
+
+(* COMMENT_TEXT;{X=60,Y=1};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;POSICIÓN Q0 HV *)
+(* COMMENT_TEXT;{X=62,Y=25};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;POSICIÓN Q0 LV *)
+
+END_PROGRAM
+
+                                                  (* ---------- Program : CHART_84612ee3_f0fd_4cdb_9764_7130f4d48434 ----------  *)
+
+PROGRAM CHART_84612ee3_f0fd_4cdb_9764_7130f4d48434
+{COMMENT := "Lógico Interlocking";DESC := "";}
+(* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+(* PartitionInfo;Id := 1,Name := Partition_1,Comment :=      *)
+VAR
+
+
+
+     (* IO_IOVISIBILITY;NOR10_1;X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID NOR10_1;1  *)
+NOR10_1         { COMMENT := 'nor10_1'; POSITION := 58,6; SIZE := 12, 12; } :NOR10;        
+
+
+     (* IO_IOVISIBILITY;AND10_2;X4:X5:X6:X7:X8:X9:X10: *)
+               
+     (* PartitionInfo;PartitionID AND10_2;1  *)
+AND10_2         { COMMENT := 'and10_1'; POSITION := 80,8; SIZE := 12, 12; } :AND10;        
+
+     (* 0065 - F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.VTmcb *)
+     EXV_SPS_0065   {COMMENT := "F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.VTmcb";DESC := "0##Application#Power system#TP B1 69kV V-3ph#VT miniatureCB#>Open##1";}:IEXV_SPS_BO;
+
+     (* 0066 - F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.VTmcb *)
+     EXV_SPS_0066   {COMMENT := "F06_F003.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.VTmcb";DESC := "0##Application#Power system#TP B 13.8kV V-1ph#VT miniatureCB#>Open##1";}:IEXV_SPS_BO;
+
+     (* 0067 - F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff *)
+     EXV_SPS_0067   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff";DESC := "0##Application#Interruptor HV#Circuit break.#Position#open##1";}:IEXV_SPS_BO;
+
+     (* 0068 - F06_F003.Application.FG1_Breaker_3pol.FB1_CILO.EnaCls *)
+     EXV_SPS_0068   {COMMENT := "F06_F003.Application.FG1_Breaker_3pol.FB1_CILO.EnaCls";DESC := "0##Application#Interruptor HV#Interlocking#>Enable closing##1";}:OEXV_BO_SPS;
+
+     (* 0069 - F06_F003.Application.FG1_UserDef.FB6_Universal.ColAlm *)
+     EXV_SPS_0069   {COMMENT := "F06_F003.Application.FG1_UserDef.FB6_Universal.ColAlm";DESC := "0##Application#Usuario#SCBR2#Falla SCD2##1";}:IEXV_SPS_BO;
+
+     (* 0070 - F06_F003.Application.FG1_UserDef.FB4_Universal.OpEx86 *)
+     EXV_SPS_0070   {COMMENT := "F06_F003.Application.FG1_UserDef.FB4_Universal.OpEx86";DESC := "0##Application#Usuario#GGIO1#Opero 86T##1";}:IEXV_SPS_BO;
+END_VAR
+
+     EXV_SPS_0065        (LNK := 65);
+
+     EXV_SPS_0066        (LNK := 66);
+
+     EXV_SPS_0067        (LNK := 67);
+
+     EXV_SPS_0069        (LNK := 69);
+
+     EXV_SPS_0070        (LNK := 70);
+
+     NOR10_1             (X1 := NOT EXV_SPS_0069.VAL(* POSITION := -1*-1: SIZE := 25* -1:   *) ,
+                          X2 := EXV_SPS_0065.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+                          X3 := EXV_SPS_0066.VAL(* POSITION := -1*-1: SIZE := 39* -1:   *) ,
+                          X4 := 0,
+                          X5 := 0,
+                          X6 := 0,
+                          X7 := 0,
+                          X8 := 0,
+                          X9 := 0,
+                          X10 := 0);
+
+     AND10_2             (X1 := NOR10_1.Y,
+                          X2 := NOT EXV_SPS_0070.VAL(* POSITION := -1*-1: SIZE := 25* -1:   *) ,
+                          X3 := EXV_SPS_0067.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+                          X4 := 1,
+                          X5 := 1,
+                          X6 := 1,
+                          X7 := 1,
+                          X8 := 1,
+                          X9 := 1,
+                          X10 := 1);
+
+     EXV_SPS_0068        (LNK := 68,
+                          VAL := AND10_2.Y(* POSITION := -1*-1: SIZE := 35* -1:   *) );
+
+(* COMMENT_TEXT;{X=60,Y=1};{Width=34, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;PERMISIVO CIERRE Q0 *)
+
+END_PROGRAM
+
+CONFIGURATION  PLC_CONTROL 
+   RESOURCE PLANS { COMMENT := "Txt100_100";} ON CPU32
+     TASK EVENT_SLOW     { TICKS := 1300;}(PRIORITY := INTERNAL);
+     TASK EVENT_FAST     { TICKS := 255;}(PRIORITY := INTERNAL);
+     TASK MEASUREMENT    { TICKS := 2536;}(PRIORITY := INTERNAL);
+     TASK INTERLOCKING   { TICKS := 2173;}(PRIORITY := INTERNAL);
+
+     PROGRAM FBI001 WITH EVENT_SLOW:  CHART_cb99d6b0_8022_43df_aff7_219f2bfcb633;
+     PROGRAM FBI002 WITH EVENT_SLOW:  CHART_14eaf170_f04e_4aff_886c_0a81de022719;
+     PROGRAM FBI003 WITH EVENT_SLOW:  CHART_1fa93baf_98dd_4234_8177_7853c6e69c1d;
+     PROGRAM FBI004 WITH EVENT_FAST:  CHART_d47ea494_be4e_4bf8_a6a4_0015a772ab46;
+     PROGRAM FBI005 WITH EVENT_SLOW:  CHART_43ec1f9d_1978_4ae0_a4d3_6a2d79fc42ef;
+     PROGRAM FBI006 WITH EVENT_SLOW:  CHART_c68e7009_e7ec_42ec_a4fd_a2113ea94766;
+     PROGRAM FBI007 WITH EVENT_SLOW:  CHART_84612ee3_f0fd_4cdb_9764_7130f4d48434;
+
+   END_RESOURCE
+
+ END_CONFIGURATION
