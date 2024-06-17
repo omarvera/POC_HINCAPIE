@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<DIGSISettingsConfigurationData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/Energy-DIGSI-SettingsService.xsd">
+  <SettingSection sectionId="SLE_Section">
+    <SettingInfo settingId="IsExpanded/{7344242-43316}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-48696}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-48718}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-53112}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-53224}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-53898}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-52293}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-52323}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-52747}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-52826}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-49729}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-49839}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-50104}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-50422}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-50572}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-50687}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-50818}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-50933}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-51270}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-51380}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-51645}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-51840}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344242-56870}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-62250}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-62272}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-66666}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-66778}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-67452}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-65847}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-65877}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-66301}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-66380}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-63283}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-63393}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-63658}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-63976}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-64126}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-64241}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-64372}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-64487}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-64824}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-64934}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-65199}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-65394}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344242-70444}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-74998}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-75020}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-76904}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-77016}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-75858}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-75991}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-76256}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-76382}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-76558}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-76513}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344242-80508}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-86758}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-86780}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-88583}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-88615}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-88313}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-88448}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-89225}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-89337}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-90375}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-90487}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-88053}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-87436}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-87569}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-91054}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-91083}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="ZoomLevel">
+      <settingvalue xsi:type="xsd:int">100</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="ScreenPositionX">
+      <settingvalue xsi:type="xsd:int">0</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="ScreenPositionY">
+      <settingvalue xsi:type="xsd:int">0</settingvalue>
+    </SettingInfo>
+  </SettingSection>
+</DIGSISettingsConfigurationData>
