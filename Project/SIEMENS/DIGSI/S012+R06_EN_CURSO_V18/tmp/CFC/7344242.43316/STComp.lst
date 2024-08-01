@@ -1,0 +1,1989 @@
+﻿ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 1
+Command line:'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+
+                                    .SEG      CODE
+ 00001:  
+ 00002:                                                    (* ---------- Structure : QUAL ----------  *)
+ 00003:  TYPE QUAL:
+ 00004:  STRUCT
+ 00005:         VAL   :  WORD;
+ 00006:  END_STRUCT;
+ 00007:  END_TYPE
+ 00008:  
+ 00009:                                                    (* ---------- Structure : SDPS ----------  *)
+ 00010:  TYPE SDPS:
+ 00011:  STRUCT
+ 00012:          DP   :  WORD;
+ 00013:           Q   :  WORD;
+ 00014:  END_STRUCT;
+ 00015:  END_TYPE
+ 00016:  
+ 00017:                                                    (* ---------- Structure : SSPS ----------  *)
+ 00018:  TYPE SSPS:
+ 00019:  STRUCT
+ 00020:          SP   :  BOOL;
+ 00021:           Q   :  WORD;
+ 00022:  END_STRUCT;
+ 00023:  END_TYPE
+ 00024:  
+ 00025:                                                    (* ---------- Structure : ID_DPCC ----------  *)
+ 00026:  TYPE ID_DPCC:
+ 00027:  STRUCT
+ 00028:         IDX   :  DINT;
+ 00029:  END_STRUCT;
+ 00030:  END_TYPE
+ 00031:  
+ 00032:                                                    (* ---------- Structure : ID_DPCC2 ----------  *)
+ 00033:  TYPE ID_DPCC2:
+ 00034:  STRUCT
+ 00035:         IDX   :  DINT;
+ 00036:  END_STRUCT;
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 2
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00037:  END_TYPE
+ 00038:  
+ 00039:  
+ 00040:                                                    (* ---------- EV Function Block : IEXV_DPC_DC ----------  *)
+ 00041:  
+ 00042:  FUNCTION_BLOCK IEXV_DPC_DC
+ 00043:  VAR_INPUT
+ 00044:          ID_IN :ID_DPCC;
+ 00045:  END_VAR
+ 00046:  VAR_OUTPUT
+ 00047:          IDOUT :ID_DPCC;
+ 00048:  END_VAR
+ 00049:          IDOUT:= ID_IN;
+                                IEXV_DPC_DC:
+
+                                    .SEG      CODE
+00000000  19220000000004000000      MOVE.L    0(DP),4(DP)
+ 00050:  END_FUNCTION_BLOCK
+0000000A  010A0000                  RETB      #0
+ 00051:  
+ 00052:  
+ 00053:  
+ 00054:                                                    (* ---------- EV Function Block : IEXV_SPS_BO ----------  *)
+ 00055:  
+ 00056:  FUNCTION_BLOCK IEXV_SPS_BO
+ 00057:  VAR_INPUT
+ 00058:          LNK :UINT := 0;
+ 00059:  END_VAR
+ 00060:  VAR_OUTPUT
+ 00061:          VAL :BOOL;
+ 00062:  END_VAR
+ 00063:  VAR
+ 00064:          INI :BOOL := 0;
+ 00065:          LNKPTR :DINT := 0;
+ 00066:  END_VAR
+ 00067:          GATE SPbo
+                                IEXV_SPS_BO:
+0000000E  0301????????              CALL      SPbo
+ 00068:  END_FUNCTION_BLOCK
+00000014  010A0000                  RETB      #0
+ 00069:  
+ 00070:  
+ 00071:  
+ 00072:                                                    (* ---------- EV Function Block : OEXV_BO_SPS ----------  *)
+ 00073:  
+ 00074:  FUNCTION_BLOCK OEXV_BO_SPS
+ 00075:  VAR_INPUT
+ 00076:          LNK :UINT := 0;
+ 00077:          VAL :BOOL := 0;
+ 00078:  END_VAR
+ 00079:  VAR
+ 00080:          INI :BOOL := 0;
+ 00081:          LNKPTR :DINT := 0;
+ 00082:  END_VAR
+ 00083:          GATE boSP
+                                OEXV_BO_SPS:
+00000018  0301????????              CALL      boSP
+ 00084:  END_FUNCTION_BLOCK
+0000001E  010A0000                  RETB      #0
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 3
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00085:  
+ 00086:  
+ 00087:  
+ 00088:                                                    (* ---------- EV Function Block : OEXV_SS_SPS ----------  *)
+ 00089:  
+ 00090:  FUNCTION_BLOCK OEXV_SS_SPS
+ 00091:  VAR_INPUT
+ 00092:          LNK :UINT := 0;
+ 00093:          VAL :SSPS;
+ 00094:  END_VAR
+ 00095:  VAR
+ 00096:          INI :BOOL := 0;
+ 00097:          LNKPTR :DINT := 0;
+ 00098:  END_VAR
+ 00099:          GATE ssSP
+                                OEXV_SS_SPS:
+00000022  0301????????              CALL      ssSP
+ 00100:  END_FUNCTION_BLOCK
+00000028  010A0000                  RETB      #0
+ 00101:  
+ 00102:  
+ 00103:  
+ 00104:                                                    (* ---------- EV Function Block : IEXV_SPS_SS ----------  *)
+ 00105:  
+ 00106:  FUNCTION_BLOCK IEXV_SPS_SS
+ 00107:  VAR_INPUT
+ 00108:          LNK :UINT := 0;
+ 00109:  END_VAR
+ 00110:  VAR_OUTPUT
+ 00111:          VAL :SSPS;
+ 00112:  END_VAR
+ 00113:  VAR
+ 00114:          INI :BOOL := 0;
+ 00115:          LNKPTR :DINT := 0;
+ 00116:  END_VAR
+ 00117:          GATE SPss
+                                IEXV_SPS_SS:
+0000002C  0301????????              CALL      SPss
+ 00118:  END_FUNCTION_BLOCK
+00000032  010A0000                  RETB      #0
+ 00119:  
+ 00120:  
+ 00121:  
+ 00122:                                                    (* ---------- EV Function Block : OEXV_DS_DPS ----------  *)
+ 00123:  
+ 00124:  FUNCTION_BLOCK OEXV_DS_DPS
+ 00125:  VAR_INPUT
+ 00126:          LNK :UINT := 0;
+ 00127:          VAL :SDPS;
+ 00128:  END_VAR
+ 00129:  VAR
+ 00130:          INI :BOOL := 0;
+ 00131:          LNKPTR :DINT := 0;
+ 00132:  END_VAR
+ 00133:          GATE dsDP
+                                OEXV_DS_DPS:
+00000036  0301????????              CALL      dsDP
+ 00134:  END_FUNCTION_BLOCK
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 4
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+0000003C  010A0000                  RETB      #0
+ 00135:  
+ 00136:  
+ 00137:  
+ 00138:                                                    (* ---------- Function Block : AND10 ----------  *)
+ 00139:  
+ 00140:  FUNCTION_BLOCK AND10
+ 00141:  {
+ 00142:       TICKS           := 2;
+ 00143:       GENERIC         := NO;
+ 00144:       BLOCKVIEW       := BIG;
+ 00145:       SYSTIMER        := 0;
+ 00146:       FF_MEMO_MEM     := 0;
+ 00147:       HELPID          := 10264;
+ 00148:       COMMENT         := 'AND';
+ 00149:       NESTED          := NO;
+ 00150:  }
+ 00151:  VAR_INPUT
+ 00152:          X1 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00153:          X2 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00154:          X3 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+ 00155:          X4 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+ 00156:          X5 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+ 00157:          X6 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+ 00158:          X7 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+ 00159:          X8 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+ 00160:          X9 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+ 00161:          X10 { TICKS := 0; VISIBLE := NO;}:BOOL := 1;
+ 00162:  END_VAR
+ 00163:  VAR_OUTPUT
+ 00164:          Y { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00165:  END_VAR
+ 00166:  Y:= X1 AND X2 AND X3 AND X4 AND X5 AND X6 AND X7 AND X8 AND X9 AND X10;
+                                AND10:
+00000040  0E0200000000              LD.W      0(DP)
+00000046  3F2502000000              AND.W     AC,2(DP)
+0000004C  3F2504000000              AND.W     AC,4(DP)
+00000052  3F2506000000              AND.W     AC,6(DP)
+00000058  3F2508000000              AND.W     AC,8(DP)
+0000005E  3F250A000000              AND.W     AC,10(DP)
+00000064  3F250C000000              AND.W     AC,12(DP)
+0000006A  3F250E000000              AND.W     AC,14(DP)
+00000070  3F2510000000              AND.W     AC,16(DP)
+00000076  3F2512000000              AND.W     AC,18(DP)
+0000007C  130214000000              ST.W      20(DP)
+ 00167:  END_FUNCTION_BLOCK
+00000082  010A0000                  RETB      #0
+ 00168:  
+ 00169:  
+ 00170:  
+ 00171:                                                    (* ---------- Function Block : DPC_DEF ----------  *)
+ 00172:  
+ 00173:  FUNCTION_BLOCK DPC_DEF
+ 00174:  {
+ 00175:       TICKS           := 0;
+ 00176:       GENERIC         := NO;
+ 00177:       BLOCKVIEW       := BIG;
+ 00178:       SYSTIMER        := 0;
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 5
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00179:       FF_MEMO_MEM     := 0;
+ 00180:       HELPID          := 10313;
+ 00181:       COMMENT         := 'DPC_DEF';
+ 00182:       NESTED          := NO;
+ 00183:  }
+ 00184:  VAR_INPUT
+ 00185:          ID { TICKS := 0; VISIBLE := YES;}:ID_DPCC;
+ 00186:          EN_I { TICKS := 0; VISIBLE := YES;}:BOOL := 1;
+ 00187:          VAL { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00188:          SELECT { TICKS := 0; VISIBLE := YES;}:UINT := 0;
+ 00189:          OPERATE { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00190:          TRIG { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00191:          EDGE { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00192:          ORIGIN { TICKS := 0; VISIBLE := YES;}:UINT := 5;
+ 00193:  END_VAR
+ 00194:  VAR_OUTPUT
+ 00195:          ID_OUT { TICKS := 0; VISIBLE := YES;}:ID_DPCC2;
+ 00196:          EN_O { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00197:  END_VAR
+ 00198:  VAR
+ 00199:       INI : BOOL  :=  0;
+ 00200:       PLNK : DINT  :=  0;
+ 00201:       ACID : UINT  :=  0;
+ 00202:       TRGOLD : BOOL  :=  0;
+ 00203:  END_VAR
+ 00204:       GATE DPDF
+                                DPC_DEF:
+00000086  0301????????              CALL      DPDF
+ 00205:  END_FUNCTION_BLOCK
+0000008C  010A0000                  RETB      #0
+ 00206:  
+ 00207:  
+ 00208:  
+ 00209:                                                    (* ---------- Function Block : DPC_EXE ----------  *)
+ 00210:  
+ 00211:  FUNCTION_BLOCK DPC_EXE
+ 00212:  {
+ 00213:       TICKS           := 0;
+ 00214:       GENERIC         := NO;
+ 00215:       BLOCKVIEW       := BIG;
+ 00216:       SYSTIMER        := 0;
+ 00217:       FF_MEMO_MEM     := 0;
+ 00218:       HELPID          := 10314;
+ 00219:       COMMENT         := 'DPC_EXE';
+ 00220:       NESTED          := NO;
+ 00221:  }
+ 00222:  VAR_INPUT
+ 00223:          ID { TICKS := 0; VISIBLE := YES;}:ID_DPCC2;
+ 00224:          EN_I { TICKS := 0; VISIBLE := YES;}:BOOL := 1;
+ 00225:          CANCEL { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00226:          REL_EQ { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00227:          REL_DBL { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00228:          REL_PROT { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00229:          REL_PLBY { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00230:          REL_ILOC { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00231:          RQ_SYNC { TICKS := 0; VISIBLE := YES;}:BOOL := 1;
+ 00232:          PT { TICKS := 0; VISIBLE := YES;}:UINT := 10;
+ 00233:  END_VAR
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 6
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00234:  VAR_OUTPUT
+ 00235:          EN_O { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00236:          ACTIVE { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00237:          SEL_OK { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00238:          OK { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00239:          ERR { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00240:  END_VAR
+ 00241:  VAR
+ 00242:       INI : BOOL  :=  0;
+ 00243:       PLNK : DINT  :=  0;
+ 00244:       ACID : UINT  :=  0;
+ 00245:  END_VAR
+ 00246:       GATE DPEX
+                                DPC_EXE:
+00000090  0301????????              CALL      DPEX
+ 00247:  END_FUNCTION_BLOCK
+00000096  010A0000                  RETB      #0
+ 00248:  
+ 00249:  
+ 00250:  
+ 00251:                                                    (* ---------- Function Block : OR10 ----------  *)
+ 00252:  
+ 00253:  FUNCTION_BLOCK OR10
+ 00254:  {
+ 00255:       TICKS           := 2;
+ 00256:       GENERIC         := NO;
+ 00257:       BLOCKVIEW       := BIG;
+ 00258:       SYSTIMER        := 0;
+ 00259:       FF_MEMO_MEM     := 0;
+ 00260:       HELPID          := 10268;
+ 00261:       COMMENT         := 'OR';
+ 00262:       NESTED          := NO;
+ 00263:  }
+ 00264:  VAR_INPUT
+ 00265:          X1 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00266:          X2 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00267:          X3 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00268:          X4 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00269:          X5 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00270:          X6 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00271:          X7 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00272:          X8 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00273:          X9 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00274:          X10 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00275:  END_VAR
+ 00276:  VAR_OUTPUT
+ 00277:          Y { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00278:  END_VAR
+ 00279:  Y:= X1 OR X2 OR X3 OR X4 OR X5 OR X6 OR X7 OR X8 OR X9 OR X10;
+                                OR10:
+0000009A  0E0200000000              LD.W      0(DP)
+000000A0  422502000000              OR.W      AC,2(DP)
+000000A6  422504000000              OR.W      AC,4(DP)
+000000AC  422506000000              OR.W      AC,6(DP)
+000000B2  422508000000              OR.W      AC,8(DP)
+000000B8  42250A000000              OR.W      AC,10(DP)
+000000BE  42250C000000              OR.W      AC,12(DP)
+000000C4  42250E000000              OR.W      AC,14(DP)
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 7
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+000000CA  422510000000              OR.W      AC,16(DP)
+000000D0  422512000000              OR.W      AC,18(DP)
+000000D6  130214000000              ST.W      20(DP)
+ 00280:  END_FUNCTION_BLOCK
+000000DC  010A0000                  RETB      #0
+ 00281:  
+ 00282:  
+ 00283:  
+ 00284:                                                    (* ---------- Function Block : CONNECT ----------  *)
+ 00285:  
+ 00286:  FUNCTION_BLOCK CONNECT
+ 00287:  {
+ 00288:       TICKS           := 0;
+ 00289:       GENERIC         := NO;
+ 00290:       BLOCKVIEW       := BIG;
+ 00291:       SYSTIMER        := 0;
+ 00292:       FF_MEMO_MEM     := 0;
+ 00293:       HELPID          := 10307;
+ 00294:       COMMENT         := 'CONNECT';
+ 00295:       NESTED          := NO;
+ 00296:  }
+ 00297:  VAR_INPUT
+ 00298:          IN { TICKS := 0; VISIBLE := YES;}:SSPS;
+ 00299:  END_VAR
+ 00300:  VAR_OUTPUT
+ 00301:          OUT { TICKS := 0; VISIBLE := YES;}:SSPS;
+ 00302:  END_VAR
+ 00303:  OUT.SP:= IN.SP; OUT.Q:= IN.Q;
+                                CONNECT:
+000000E0  18220000000004000000      MOVE.W    0(DP),4(DP)
+000000EA  18220200000006000000      MOVE.W    2(DP),6(DP)
+ 00304:  END_FUNCTION_BLOCK
+000000F4  010A0000                  RETB      #0
+ 00305:  
+ 00306:  
+ 00307:  
+ 00308:                                                    (* ---------- Function Block : NOR10 ----------  *)
+ 00309:  
+ 00310:  FUNCTION_BLOCK NOR10
+ 00311:  {
+ 00312:       TICKS           := 3;
+ 00313:       GENERIC         := NO;
+ 00314:       BLOCKVIEW       := BIG;
+ 00315:       SYSTIMER        := 0;
+ 00316:       FF_MEMO_MEM     := 0;
+ 00317:       HELPID          := 10267;
+ 00318:       COMMENT         := 'NOR';
+ 00319:       NESTED          := NO;
+ 00320:  }
+ 00321:  VAR_INPUT
+ 00322:          X1 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00323:          X2 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00324:          X3 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00325:          X4 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00326:          X5 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00327:          X6 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00328:          X7 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00329:          X8 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 8
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00330:          X9 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00331:          X10 { TICKS := 0; VISIBLE := NO;}:BOOL := 0;
+ 00332:  END_VAR
+ 00333:  VAR_OUTPUT
+ 00334:          Y { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00335:  END_VAR
+ 00336:  Y:= NOT (X1 OR X2 OR X3 OR X4 OR X5 OR X6 OR X7 OR X8 OR X9 OR X10);
+                                NOR10:
+000000F8  0E0200000000              LD.W      0(DP)
+000000FE  422502000000              OR.W      AC,2(DP)
+00000104  422504000000              OR.W      AC,4(DP)
+0000010A  422506000000              OR.W      AC,6(DP)
+00000110  422508000000              OR.W      AC,8(DP)
+00000116  42250A000000              OR.W      AC,10(DP)
+0000011C  42250C000000              OR.W      AC,12(DP)
+00000122  42250E000000              OR.W      AC,14(DP)
+00000128  422510000000              OR.W      AC,16(DP)
+0000012E  422512000000              OR.W      AC,18(DP)
+00000134  4805                      NOT.W     AC
+00000136  3FA50100                  AND.W     AC,#1
+0000013A  130214000000              ST.W      20(DP)
+ 00337:  END_FUNCTION_BLOCK
+00000140  010A0000                  RETB      #0
+ 00338:  
+ 00339:  
+ 00340:  
+ 00341:                                                    (* ---------- Function Block : BUILD_Q ----------  *)
+ 00342:  
+ 00343:  FUNCTION_BLOCK BUILD_Q
+ 00344:  {
+ 00345:       TICKS           := 0;
+ 00346:       GENERIC         := NO;
+ 00347:       BLOCKVIEW       := BIG;
+ 00348:       SYSTIMER        := 0;
+ 00349:       FF_MEMO_MEM     := 0;
+ 00350:       HELPID          := 10245;
+ 00351:       COMMENT         := 'BUILD_Q';
+ 00352:       NESTED          := NO;
+ 00353:  }
+ 00354:  VAR_INPUT
+ 00355:          GOOD { TICKS := 0; VISIBLE := YES;}:BOOL := 1;
+ 00356:          BAD { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00357:  END_VAR
+ 00358:  VAR_OUTPUT
+ 00359:          QL { TICKS := 0; VISIBLE := YES;}:QUAL;
+ 00360:  END_VAR
+ 00361:  VAR
+ 00362:       INI : BOOL  :=  0;
+ 00363:  END_VAR
+ 00364:       GATE BQL2
+                                BUILD_Q:
+00000144  0301????????              CALL      BQL2
+ 00365:  END_FUNCTION_BLOCK
+0000014A  010A0000                  RETB      #0
+ 00366:  
+ 00367:  
+ 00368:  
+ 00369:                                                    (* ---------- Function Block : BUILD_DPS ----------  *)
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 9
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00370:  
+ 00371:  FUNCTION_BLOCK BUILD_DPS
+ 00372:  {
+ 00373:       TICKS           := 1;
+ 00374:       GENERIC         := NO;
+ 00375:       BLOCKVIEW       := BIG;
+ 00376:       SYSTIMER        := 0;
+ 00377:       FF_MEMO_MEM     := 0;
+ 00378:       HELPID          := 10244;
+ 00379:       COMMENT         := 'BUILD_DPS';
+ 00380:       NESTED          := NO;
+ 00381:  }
+ 00382:  VAR_INPUT
+ 00383:          IS_ON { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00384:          IS_OFF { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00385:          BAD_00 { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00386:          QL { TICKS := 0; VISIBLE := YES;}:QUAL;
+ 00387:  END_VAR
+ 00388:  VAR_OUTPUT
+ 00389:          OUT { TICKS := 0; VISIBLE := YES;}:SDPS;
+ 00390:  END_VAR
+ 00391:  VAR
+ 00392:       INI : BOOL  :=  0;
+ 00393:  END_VAR
+ 00394:       GATE BDPS
+                                BUILD_DPS:
+0000014E  0301????????              CALL      BDPS
+ 00395:  END_FUNCTION_BLOCK
+00000154  010A0000                  RETB      #0
+ 00396:  
+ 00397:  
+ 00398:  
+ 00399:                                                    (* ---------- Function Block : R_TRIG ----------  *)
+ 00400:  
+ 00401:  FUNCTION_BLOCK R_TRIG
+ 00402:  {
+ 00403:       TICKS           := 0;
+ 00404:       GENERIC         := NO;
+ 00405:       BLOCKVIEW       := BIG;
+ 00406:       SYSTIMER        := 0;
+ 00407:       FF_MEMO_MEM     := 0;
+ 00408:       HELPID          := 10263;
+ 00409:       COMMENT         := 'R_TRIG';
+ 00410:       NESTED          := NO;
+ 00411:  }
+ 00412:  VAR_INPUT
+ 00413:          CLK { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00414:  END_VAR
+ 00415:  VAR_OUTPUT
+ 00416:          Q { TICKS := 0; VISIBLE := YES;}:BOOL := 0;
+ 00417:  END_VAR
+ 00418:  VAR
+ 00419:       INI : BOOL  :=  0;
+ 00420:       OCL : BOOL  :=  0;
+ 00421:  END_VAR
+ 00422:       GATE RTRG
+                                R_TRIG:
+00000158  0301????????              CALL      RTRG
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 10
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00423:  END_FUNCTION_BLOCK
+0000015E  010A0000                  RETB      #0
+ 00424:  
+ 00425:  
+ 00426:  
+ 00427:  
+ 00428:  
+ 00429:                                                    (* ---------- Program : CHART_e25e9a5c_6746_4c2f_a7df_d855c15d8b2a ----------  *)
+ 00430:  
+ 00431:  PROGRAM CHART_e25e9a5c_6746_4c2f_a7df_d855c15d8b2a
+ 00432:  {COMMENT := "Lógico Sincronismo";DESC := "";}
+ 00433:  (* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+ 00434:  (* PartitionInfo;Id := 1,Name := Partition_1,Comment :=       *)
+ 00435:  VAR
+ 00436:  
+ 00437:  
+ 00438:  
+ 00439:       (* IO_IOVISIBILITY;AND10_1;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00440:                 
+ 00441:       (* PartitionInfo;PartitionID AND10_1;1  *)
+ 00442:  AND10_1         { COMMENT := 'and10_1'; POSITION := 47,15; SIZE := 12, 12; } :AND10;        
+ 00443:  
+ 00444:                 
+ 00445:       (* PartitionInfo;PartitionID DPC_DEF_2;1  *)
+ 00446:  DPC_DEF_2       { COMMENT := 'dpc_def_1'; POSITION := 65,10; SIZE := 12, 12; } :DPC_DEF;      
+ 00447:  
+ 00448:                 
+ 00449:       (* PartitionInfo;PartitionID DPC_EXE_3;1  *)
+ 00450:  DPC_EXE_3       { COMMENT := 'dpc_exe_1'; POSITION := 84,10; SIZE := 12, 12; } :DPC_EXE;      
+ 00451:  
+ 00452:  
+ 00453:       (* IO_IOVISIBILITY;OR10_4;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00454:                 
+ 00455:       (* PartitionInfo;PartitionID OR10_4;1  *)
+ 00456:  OR10_4          { COMMENT := 'or10_1'; POSITION := 59,29; SIZE := 12, 12; } :OR10;         
+ 00457:  
+ 00458:       (* 0008 - F06_F002.Application.FG1_Breaker_3pol.FB1_CSWI.Pos *)
+ 00459:       EXV_DPC_0008   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_CSWI.Pos";DESC := "0##Application#Interruptor HV#Control#Cmd. with feedback##1";}:IEXV_DPC_DC;
+ 00460:  
+ 00461:       (* 0009 - F06_F002.Application.FG1_UserDef.FB4_Universal.OpCls0 *)
+ 00462:       EXV_SPS_0009   {COMMENT := "F06_F002.Application.FG1_UserDef.FB4_Universal.OpCls0";DESC := "0##Application#Usuario#GGIO1#Cierre Manual Q0##1";}:IEXV_SPS_BO;
+ 00463:  
+ 00464:       (* 0010 - F06_F002.Application.FG1_Breaker_3pol.FN1_RSYN_SynCheck.FB1_RSYN_SynCheck.SynReq1 *)
+ 00465:       EXV_SPS_0010   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FN1_RSYN_SynCheck.FB1_RSYN_SynCheck.SynReq1";DESC := "0##Application#Interruptor HV#25#Synchrocheck 1#Arranque Sincronismo##1";}:OEXV_BO_SPS;
+ 00466:  
+ 00467:       (* 0011 - F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.CmdActv *)
+ 00468:       EXV_SPS_0011   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.CmdActv";DESC := "0##Application#Interruptor HV#Circuit break.#Command active##1";}:IEXV_SPS_BO;
+ 00469:  
+ 00470:       (* 0012 - F06_F002.Application.FG1_UserDef.FB2_Universal.FailDiagDS *)
+ 00471:       EXV_SPS_0012   {COMMENT := "F06_F002.Application.FG1_UserDef.FB2_Universal.FailDiagDS";DESC := "0##Application#Usuario#SIED4#Anormalidad F06_BCU##1";}:IEXV_SPS_BO;
+ 00472:  END_VAR
+ 00473:  
+ 00474:       EXV_DPC_0008        (ID_IN.IDX := 8);
+                                CHART_e25e9a5c_6746_4c2f_a7df_d855c15d8b2a:
+00000162  192B0800000076000000      MOVE.L    #8,118(DP)
+0000016C  04B10000000076000000      VCALL     IEXV_DPC_DC,#118
+ 00475:  
+ 00476:       EXV_SPS_0009        (LNK := 9);
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 11
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+00000176  182A09007E000000          MOVE.W    #9,126(DP)
+0000017E  04B10E0000007E000000      VCALL     IEXV_SPS_BO,#126
+ 00477:  
+ 00478:       EXV_SPS_0011        (LNK := 11);
+00000188  182A0B0092000000          MOVE.W    #11,146(DP)
+00000190  04B10E00000092000000      VCALL     IEXV_SPS_BO,#146
+ 00479:  
+ 00480:       EXV_SPS_0012        (LNK := 12);
+0000019A  182A0C009C000000          MOVE.W    #12,156(DP)
+000001A2  04B10E0000009C000000      VCALL     IEXV_SPS_BO,#156
+ 00481:  
+ 00482:       AND10_1             (X1 := EXV_SPS_0009.VAL(* POSITION := -1*-1: SIZE := 28* -1:   *) ,
+000001AC  18228000000000000000      MOVE.W    128(DP),0(DP)
+ 00483:                            X2 := EXV_SPS_0012.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+000001B6  18229E00000002000000      MOVE.W    158(DP),2(DP)
+ 00484:                            X3 := 1,
+000001C0  182A010004000000          MOVE.W    #1,4(DP)
+ 00485:                            X4 := 1,
+000001C8  182A010006000000          MOVE.W    #1,6(DP)
+ 00486:                            X5 := 1,
+000001D0  182A010008000000          MOVE.W    #1,8(DP)
+ 00487:                            X6 := 1,
+000001D8  182A01000A000000          MOVE.W    #1,10(DP)
+ 00488:                            X7 := 1,
+000001E0  182A01000C000000          MOVE.W    #1,12(DP)
+ 00489:                            X8 := 1,
+000001E8  182A01000E000000          MOVE.W    #1,14(DP)
+ 00490:                            X9 := 1,
+000001F0  182A010010000000          MOVE.W    #1,16(DP)
+ 00491:                            X10 := 1);
+000001F8  182A010012000000          MOVE.W    #1,18(DP)
+00000200  04B14000000000000000      VCALL     AND10,#0
+ 00492:  
+ 00493:       DPC_DEF_2           (ID := EXV_DPC_0008.IDOUT(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+0000020A  19227A00000016000000      MOVE.L    122(DP),22(DP)
+ 00494:                            EN_I := 1,
+00000214  182A01001A000000          MOVE.W    #1,26(DP)
+ 00495:                            VAL := 1,
+0000021C  182A01001C000000          MOVE.W    #1,28(DP)
+ 00496:                            SELECT := 2,
+00000224  182A02001E000000          MOVE.W    #2,30(DP)
+ 00497:                            OPERATE := 1,
+0000022C  182A010020000000          MOVE.W    #1,32(DP)
+ 00498:                            TRIG := AND10_1.Y,
+00000234  18221400000022000000      MOVE.W    20(DP),34(DP)
+ 00499:                            EDGE := 0,
+0000023E  182A000024000000          MOVE.W    #0,36(DP)
+ 00500:                            ORIGIN := 5);
+00000246  182A050026000000          MOVE.W    #5,38(DP)
+0000024E  04B18600000016000000      VCALL     DPC_DEF,#22
+ 00501:  
+ 00502:  
+ 00503:       DPC_EXE_3           (ID := DPC_DEF_2.ID_OUT,
+00000258  19222800000038000000      MOVE.L    40(DP),56(DP)
+ 00504:                            EN_I := DPC_DEF_2.EN_O,
+00000262  18222C0000003C000000      MOVE.W    44(DP),60(DP)
+ 00505:                            CANCEL := 0,
+0000026C  182A00003E000000          MOVE.W    #0,62(DP)
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 12
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00506:                            REL_EQ := 0,
+00000274  182A000040000000          MOVE.W    #0,64(DP)
+ 00507:                            REL_DBL := 0,
+0000027C  182A000042000000          MOVE.W    #0,66(DP)
+ 00508:                            REL_PROT := 1,
+00000284  182A010044000000          MOVE.W    #1,68(DP)
+ 00509:                            REL_PLBY := 0,
+0000028C  182A000046000000          MOVE.W    #0,70(DP)
+ 00510:                            REL_ILOC := 1,
+00000294  182A010048000000          MOVE.W    #1,72(DP)
+ 00511:                            RQ_SYNC := 1,
+0000029C  182A01004A000000          MOVE.W    #1,74(DP)
+ 00512:                            PT := 10);
+000002A4  182A0A004C000000          MOVE.W    #10,76(DP)
+000002AC  04B19000000038000000      VCALL     DPC_EXE,#56
+ 00513:       OR10_4              (X1 := EXV_SPS_0009.VAL(* POSITION := -1*-1: SIZE := 28* -1:   *) ,
+000002B6  18228000000060000000      MOVE.W    128(DP),96(DP)
+ 00514:                            X2 := EXV_SPS_0011.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+000002C0  18229400000062000000      MOVE.W    148(DP),98(DP)
+ 00515:                            X3 := 0,
+000002CA  182A000064000000          MOVE.W    #0,100(DP)
+ 00516:                            X4 := 0,
+000002D2  182A000066000000          MOVE.W    #0,102(DP)
+ 00517:                            X5 := 0,
+000002DA  182A000068000000          MOVE.W    #0,104(DP)
+ 00518:                            X6 := 0,
+000002E2  182A00006A000000          MOVE.W    #0,106(DP)
+ 00519:                            X7 := 0,
+000002EA  182A00006C000000          MOVE.W    #0,108(DP)
+ 00520:                            X8 := 0,
+000002F2  182A00006E000000          MOVE.W    #0,110(DP)
+ 00521:                            X9 := 0,
+000002FA  182A000070000000          MOVE.W    #0,112(DP)
+ 00522:                            X10 := 0);
+00000302  182A000072000000          MOVE.W    #0,114(DP)
+0000030A  04B19A00000060000000      VCALL     OR10,#96
+ 00523:  
+ 00524:       EXV_SPS_0010        (LNK := 10,
+00000314  182A0A0088000000          MOVE.W    #10,136(DP)
+ 00525:                            VAL := OR10_4.Y(* POSITION := -1*-1: SIZE := 40* -1:   *) );
+0000031C  1822740000008A000000      MOVE.W    116(DP),138(DP)
+00000326  04B11800000088000000      VCALL     OEXV_BO_SPS,#136
+ 00526:  
+ 00527:  (* COMMENT_TEXT;{X=60,Y=2};{Width=27, Height=5};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;VERIFICACIÓN SINCRONISMO *)
+ 00528:  
+ 00529:  END_PROGRAM
+00000330  010A0000                  RETB      #0
+ 00530:  
+ 00531:                                                    (* ---------- Program : CHART_ee3534f3_86dc_4136_8932_aad2f5b44fe1 ----------  *)
+ 00532:  
+ 00533:  PROGRAM CHART_ee3534f3_86dc_4136_8932_aad2f5b44fe1
+ 00534:  {COMMENT := "Lógico Falla PTs";DESC := "";}
+ 00535:  (* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+ 00536:  (* PartitionInfo;Id := 1,Name := Partition_1,Comment :=      *)
+ 00537:  VAR
+ 00538:  
+ 00539:  
+ 00540:  
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 13
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00541:       (* IO_IOVISIBILITY;OR10_1;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00542:                 
+ 00543:       (* PartitionInfo;PartitionID OR10_1;1  *)
+ 00544:  OR10_1          { COMMENT := 'or10_1'; POSITION := 69,5; SIZE := 12, 12; } :OR10;         
+ 00545:  
+ 00546:  
+ 00547:       (* IO_IOVISIBILITY;OR10_2;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00548:                 
+ 00549:       (* PartitionInfo;PartitionID OR10_2;1  *)
+ 00550:  OR10_2          { COMMENT := 'or10_2'; POSITION := 69,18; SIZE := 12, 12; } :OR10;         
+ 00551:  
+ 00552:       (* 0013 - F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.VTmcb *)
+ 00553:       EXV_SPS_0013   {COMMENT := "F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.VTmcb";DESC := "0##Application#Power system#TP B1 69kV V-3ph#VT miniatureCB#>Open##1";}:OEXV_BO_SPS;
+ 00554:  
+ 00555:       (* 0014 - F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.MCB *)
+ 00556:       EXV_SPS_0014   {COMMENT := "F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.MCB";DESC := "0##Application#Power system#TP B1 69kV V-3ph#VT miniatureCB#Falla MCB PT Bus1/2 69 PCyM##1";}:IEXV_SPS_BO;
+ 00557:  
+ 00558:       (* 0015 - F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.MCB3 *)
+ 00559:       EXV_SPS_0015   {COMMENT := "F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.MCB3";DESC := "0##Application#Power system#TP B 13.8kV V-1ph#VT miniatureCB#Falla MCB PT 13.8kV PCyM##1";}:IEXV_SPS_BO;
+ 00560:  
+ 00561:       (* 0016 - F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.VTmcb *)
+ 00562:       EXV_SPS_0016   {COMMENT := "F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.VTmcb";DESC := "0##Application#Power system#TP B 13.8kV V-1ph#VT miniatureCB#>Open##1";}:OEXV_BO_SPS;
+ 00563:  
+ 00564:       (* 0017 - F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.MCB1 *)
+ 00565:       EXV_SPS_0017   {COMMENT := "F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.MCB1";DESC := "0##Application#Power system#TP B1 69kV V-3ph#VT miniatureCB#Falla MCB PT Bus1 69 Dev 2##1";}:IEXV_SPS_BO;
+ 00566:  
+ 00567:       (* 0018 - F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.MCB2 *)
+ 00568:       EXV_SPS_0018   {COMMENT := "F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.MCB2";DESC := "0##Application#Power system#TP B 13.8kV V-1ph#VT miniatureCB#Falla MCB 13.8kV Dev 2##1";}:IEXV_SPS_BO;
+ 00569:  END_VAR
+ 00570:  
+ 00571:       EXV_SPS_0014        (LNK := 14);
+                                CHART_ee3534f3_86dc_4136_8932_aad2f5b44fe1:
+00000334  182A0E0036000000          MOVE.W    #14,54(DP)
+0000033C  04B10E00000036000000      VCALL     IEXV_SPS_BO,#54
+ 00572:  
+ 00573:       EXV_SPS_0015        (LNK := 15);
+00000346  182A0F0040000000          MOVE.W    #15,64(DP)
+0000034E  04B10E00000040000000      VCALL     IEXV_SPS_BO,#64
+ 00574:  
+ 00575:       EXV_SPS_0017        (LNK := 17);
+00000358  182A110054000000          MOVE.W    #17,84(DP)
+00000360  04B10E00000054000000      VCALL     IEXV_SPS_BO,#84
+ 00576:  
+ 00577:       EXV_SPS_0018        (LNK := 18);
+0000036A  182A12005E000000          MOVE.W    #18,94(DP)
+00000372  04B10E0000005E000000      VCALL     IEXV_SPS_BO,#94
+ 00578:  
+ 00579:       OR10_1              (X1 := EXV_SPS_0014.VAL(* POSITION := -1*-1: SIZE := 49* -1:   *) ,
+0000037C  18223800000000000000      MOVE.W    56(DP),0(DP)
+ 00580:                            X2 := EXV_SPS_0017.VAL(* POSITION := -1*-1: SIZE := 49* -1:   *) ,
+00000386  18225600000002000000      MOVE.W    86(DP),2(DP)
+ 00581:                            X3 := 0,
+00000390  182A000004000000          MOVE.W    #0,4(DP)
+ 00582:                            X4 := 0,
+00000398  182A000006000000          MOVE.W    #0,6(DP)
+ 00583:                            X5 := 0,
+000003A0  182A000008000000          MOVE.W    #0,8(DP)
+ 00584:                            X6 := 0,
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 14
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+000003A8  182A00000A000000          MOVE.W    #0,10(DP)
+ 00585:                            X7 := 0,
+000003B0  182A00000C000000          MOVE.W    #0,12(DP)
+ 00586:                            X8 := 0,
+000003B8  182A00000E000000          MOVE.W    #0,14(DP)
+ 00587:                            X9 := 0,
+000003C0  182A000010000000          MOVE.W    #0,16(DP)
+ 00588:                            X10 := 0);
+000003C8  182A000012000000          MOVE.W    #0,18(DP)
+000003D0  04B19A00000000000000      VCALL     OR10,#0
+ 00589:  
+ 00590:       OR10_2              (X1 := EXV_SPS_0015.VAL(* POSITION := -1*-1: SIZE := 48* -1:   *) ,
+000003DA  18224200000016000000      MOVE.W    66(DP),22(DP)
+ 00591:                            X2 := EXV_SPS_0018.VAL(* POSITION := -1*-1: SIZE := 47* -1:   *) ,
+000003E4  18226000000018000000      MOVE.W    96(DP),24(DP)
+ 00592:                            X3 := 0,
+000003EE  182A00001A000000          MOVE.W    #0,26(DP)
+ 00593:                            X4 := 0,
+000003F6  182A00001C000000          MOVE.W    #0,28(DP)
+ 00594:                            X5 := 0,
+000003FE  182A00001E000000          MOVE.W    #0,30(DP)
+ 00595:                            X6 := 0,
+00000406  182A000020000000          MOVE.W    #0,32(DP)
+ 00596:                            X7 := 0,
+0000040E  182A000022000000          MOVE.W    #0,34(DP)
+ 00597:                            X8 := 0,
+00000416  182A000024000000          MOVE.W    #0,36(DP)
+ 00598:                            X9 := 0,
+0000041E  182A000026000000          MOVE.W    #0,38(DP)
+ 00599:                            X10 := 0);
+00000426  182A000028000000          MOVE.W    #0,40(DP)
+0000042E  04B19A00000016000000      VCALL     OR10,#22
+ 00600:  
+ 00601:       EXV_SPS_0013        (LNK := 13,
+00000438  182A0D002C000000          MOVE.W    #13,44(DP)
+ 00602:                            VAL := OR10_1.Y(* POSITION := -1*-1: SIZE := 38* -1:   *) );
+00000440  1822140000002E000000      MOVE.W    20(DP),46(DP)
+0000044A  04B1180000002C000000      VCALL     OEXV_BO_SPS,#44
+ 00603:       EXV_SPS_0016        (LNK := 16,
+00000454  182A10004A000000          MOVE.W    #16,74(DP)
+ 00604:                            VAL := OR10_2.Y(* POSITION := -1*-1: SIZE := 39* -1:   *) );
+0000045C  18222A0000004C000000      MOVE.W    42(DP),76(DP)
+00000466  04B1180000004A000000      VCALL     OEXV_BO_SPS,#74
+ 00605:  
+ 00606:  (* COMMENT_TEXT;{X=61,Y=1};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;FALLAS PT´S 69kV *)
+ 00607:  (* COMMENT_TEXT;{X=60,Y=14};{Width=29, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;FALLAS PT´S 13.8kV *)
+ 00608:  
+ 00609:  END_PROGRAM
+00000470  010A0000                  RETB      #0
+ 00610:  
+ 00611:                                                    (* ---------- Program : CHART_830e140f_4d28_49ac_9621_b61b6ef2ad33 ----------  *)
+ 00612:  
+ 00613:  PROGRAM CHART_830e140f_4d28_49ac_9621_b61b6ef2ad33
+ 00614:  {COMMENT := "Lógico Alarmas";DESC := "";}
+ 00615:  (* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+ 00616:  (* PartitionInfo;Id := 1,Name := Partition_1,Comment :=      *)
+ 00617:  VAR
+ 00618:  
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 15
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00619:  
+ 00620:  
+ 00621:       (* IO_IOVISIBILITY;OR10_1;X4:X5:X6:X7:X8:X9:X10: *)
+ 00622:                 
+ 00623:       (* PartitionInfo;PartitionID OR10_1;1  *)
+ 00624:  OR10_1          { COMMENT := 'or10_1'; POSITION := 63,76; SIZE := 12, 12; } :OR10;         
+ 00625:  
+ 00626:  
+ 00627:       (* IO_IOVISIBILITY;OR10_2;X4:X5:X6:X7:X8:X9:X10: *)
+ 00628:                 
+ 00629:       (* PartitionInfo;PartitionID OR10_2;1  *)
+ 00630:  OR10_2          { COMMENT := 'or10_2'; POSITION := 63,83; SIZE := 12, 12; } :OR10;         
+ 00631:  
+ 00632:  
+ 00633:       (* IO_IOVISIBILITY;OR10_3;X4:X5:X6:X7:X8:X9:X10: *)
+ 00634:                 
+ 00635:       (* PartitionInfo;PartitionID OR10_3;1  *)
+ 00636:  OR10_3          { COMMENT := 'or10_3'; POSITION := 63,90; SIZE := 12, 12; } :OR10;         
+ 00637:  
+ 00638:  
+ 00639:       (* IO_IOVISIBILITY;OR10_4;X4:X5:X6:X7:X8:X9:X10: *)
+ 00640:                 
+ 00641:       (* PartitionInfo;PartitionID OR10_4;1  *)
+ 00642:  OR10_4          { COMMENT := 'or10_4'; POSITION := 63,97; SIZE := 12, 12; } :OR10;         
+ 00643:  
+ 00644:  
+ 00645:       (* IO_IOVISIBILITY;OR10_5;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00646:                 
+ 00647:       (* PartitionInfo;PartitionID OR10_5;1  *)
+ 00648:  OR10_5          { COMMENT := 'or10_5'; POSITION := 63,105; SIZE := 12, 12; } :OR10;         
+ 00649:  
+ 00650:                 
+ 00651:       (* PartitionInfo;PartitionID CONNECT_6;1  *)
+ 00652:  CONNECT_6       { COMMENT := 'connect_1'; POSITION := 70,6; SIZE := 12, 12; } :CONNECT;      
+ 00653:  
+ 00654:                 
+ 00655:       (* PartitionInfo;PartitionID CONNECT_7;1  *)
+ 00656:  CONNECT_7       { COMMENT := 'connect_2'; POSITION := 70,12; SIZE := 12, 12; } :CONNECT;      
+ 00657:  
+ 00658:                 
+ 00659:       (* PartitionInfo;PartitionID CONNECT_8;1  *)
+ 00660:  CONNECT_8       { COMMENT := 'connect_3'; POSITION := 70,18; SIZE := 12, 12; } :CONNECT;      
+ 00661:  
+ 00662:                 
+ 00663:       (* PartitionInfo;PartitionID CONNECT_9;1  *)
+ 00664:  CONNECT_9       { COMMENT := 'connect_4'; POSITION := 70,24; SIZE := 12, 12; } :CONNECT;      
+ 00665:  
+ 00666:                 
+ 00667:       (* PartitionInfo;PartitionID CONNECT_10;1  *)
+ 00668:  CONNECT_10      { COMMENT := 'connect_5'; POSITION := 70,30; SIZE := 12, 12; } :CONNECT;      
+ 00669:  
+ 00670:  
+ 00671:       (* IO_IOVISIBILITY;AND10_11;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00672:                 
+ 00673:       (* PartitionInfo;PartitionID AND10_11;1  *)
+ 00674:  AND10_11        { COMMENT := 'and10_1'; POSITION := 83,76; SIZE := 12, 12; } :AND10;        
+ 00675:  
+ 00676:  
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 16
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00677:       (* IO_IOVISIBILITY;AND10_12;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00678:                 
+ 00679:       (* PartitionInfo;PartitionID AND10_12;1  *)
+ 00680:  AND10_12        { COMMENT := 'and10_2'; POSITION := 83,83; SIZE := 12, 12; } :AND10;        
+ 00681:  
+ 00682:  
+ 00683:       (* IO_IOVISIBILITY;AND10_13;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00684:                 
+ 00685:       (* PartitionInfo;PartitionID AND10_13;1  *)
+ 00686:  AND10_13        { COMMENT := 'and10_3'; POSITION := 83,90; SIZE := 12, 12; } :AND10;        
+ 00687:  
+ 00688:  
+ 00689:       (* IO_IOVISIBILITY;AND10_14;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00690:                 
+ 00691:       (* PartitionInfo;PartitionID AND10_14;1  *)
+ 00692:  AND10_14        { COMMENT := 'and10_4'; POSITION := 83,97; SIZE := 12, 12; } :AND10;        
+ 00693:  
+ 00694:       (* 0019 - F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB0_TDIFF.FctBlk *)
+ 00695:       EXV_SPS_0019   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB0_TDIFF.FctBlk";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#General#Estado 87T##1";}:OEXV_SS_SPS;
+ 00696:  
+ 00697:       (* 0020 - F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Blk *)
+ 00698:       EXV_SPS_0020   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Blk";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF#>Block stage##1";}:IEXV_SPS_SS;
+ 00699:  
+ 00700:       (* 0021 - F06_F002.Application.FG1_Breaker_3pol.FB1_STCS_2BI.Failure *)
+ 00701:       EXV_SPS_0021   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_STCS_2BI.Failure";DESC := "0##Application#Interruptor HV#74TC - SCD1#Trip-circuit failure##1";}:IEXV_SPS_SS;
+ 00702:  
+ 00703:       (* 0022 - F06_F002.Application.FG1_UserDef.FB6_Universal.ColAlm *)
+ 00704:       EXV_SPS_0022   {COMMENT := "F06_F002.Application.FG1_UserDef.FB6_Universal.ColAlm";DESC := "0##Application#Usuario#SCBR1#Falla SCD1##1";}:OEXV_SS_SPS;
+ 00705:  
+ 00706:       (* 0023 - F06_F002.Application.LTMS_Application.TmSynErr *)
+ 00707:       EXV_SPS_0023   {COMMENT := "F06_F002.Application.LTMS_Application.TmSynErr";DESC := "0##Application#Time syn.#Time sync. error##1";}:IEXV_SPS_SS;
+ 00708:  
+ 00709:       (* 0024 - F06_F002.Application.FG1_UserDef.FB7_Universal.TmSynErr *)
+ 00710:       EXV_SPS_0024   {COMMENT := "F06_F002.Application.FG1_UserDef.FB7_Universal.TmSynErr";DESC := "0##Application#Usuario#LTMS0#Falla Sincronización##1";}:OEXV_SS_SPS;
+ 00711:  
+ 00712:       (* 0025 - F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Op.ACTGeneral *)
+ 00713:       EXV_SPS_0025   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Op.ACTGeneral";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF#Operate#general##1";}:IEXV_SPS_SS;
+ 00714:  
+ 00715:       (* 0026 - F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_FastUnrestrained.Op.ACTGeneral *)
+ 00716:       EXV_SPS_0026   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_FastUnrestrained.Op.ACTGeneral";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF fast#Operate#general##1";}:IEXV_SPS_SS;
+ 00717:  
+ 00718:       (* 0027 - F06_F002.Application.FG1_UserDef.FB8_Universal.Op *)
+ 00719:       EXV_SPS_0027   {COMMENT := "F06_F002.Application.FG1_UserDef.FB8_Universal.Op";DESC := "0##Application#Usuario#PDIF_PTRC1#Opero I-DIFF##1";}:OEXV_SS_SPS;
+ 00720:  
+ 00721:       (* 0028 - F06_F002.Application.FG1_UserDef.FB9_Universal.Op *)
+ 00722:       EXV_SPS_0028   {COMMENT := "F06_F002.Application.FG1_UserDef.FB9_Universal.Op";DESC := "0##Application#Usuario#PDIF_PTRC2#OperoI -DIFF fast##1";}:OEXV_SS_SPS;
+ 00723:  
+ 00724:       (* 0029 - F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral *)
+ 00725:       EXV_SPS_0029   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral";DESC := "0##Application#Interruptor HV#Trip logic#Trip indication#general##1";}:IEXV_SPS_BO;
+ 00726:  
+ 00727:       (* 0030 - F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrA *)
+ 00728:       EXV_SPS_0030   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrA";DESC := "0##Application#Interruptor HV#Trip logic#Disparo Fase A##1";}:OEXV_BO_SPS;
+ 00729:  
+ 00730:       (* 0031 - F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrB *)
+ 00731:       EXV_SPS_0031   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrB";DESC := "0##Application#Interruptor HV#Trip logic#Disparo Fase B##1";}:OEXV_BO_SPS;
+ 00732:  
+ 00733:       (* 0032 - F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrC *)
+ 00734:       EXV_SPS_0032   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrC";DESC := "0##Application#Interruptor HV#Trip logic#Disparo Fase C##1";}:OEXV_BO_SPS;
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 17
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00735:  
+ 00736:       (* 0033 - F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrN *)
+ 00737:       EXV_SPS_0033   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.TrN";DESC := "0##Application#Interruptor HV#Trip logic#Disparo Neutro##1";}:OEXV_BO_SPS;
+ 00738:  
+ 00739:       (* 0034 - F06_F002.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL1 *)
+ 00740:       EXV_SPS_0034   {COMMENT := "F06_F002.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL1";DESC := "0##Application#66 KV#Group indicat.#Pickup#phs A##1";}:IEXV_SPS_BO;
+ 00741:  
+ 00742:       (* 0035 - F06_F002.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL2 *)
+ 00743:       EXV_SPS_0035   {COMMENT := "F06_F002.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL2";DESC := "0##Application#66 KV#Group indicat.#Pickup#phs B##1";}:IEXV_SPS_BO;
+ 00744:  
+ 00745:       (* 0036 - F06_F002.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL3 *)
+ 00746:       EXV_SPS_0036   {COMMENT := "F06_F002.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL3";DESC := "0##Application#66 KV#Group indicat.#Pickup#phs C##1";}:IEXV_SPS_BO;
+ 00747:  
+ 00748:       (* 0037 - F06_F002.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDNeut *)
+ 00749:       EXV_SPS_0037   {COMMENT := "F06_F002.Application.FG1_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDNeut";DESC := "0##Application#66 KV#Group indicat.#Pickup#gnd##1";}:IEXV_SPS_BO;
+ 00750:  
+ 00751:       (* 0038 - F06_F002.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL1 *)
+ 00752:       EXV_SPS_0038   {COMMENT := "F06_F002.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL1";DESC := "0##Application#13.8 KV#Group indicat.#Pickup#phs A##1";}:IEXV_SPS_BO;
+ 00753:  
+ 00754:       (* 0039 - F06_F002.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL2 *)
+ 00755:       EXV_SPS_0039   {COMMENT := "F06_F002.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL2";DESC := "0##Application#13.8 KV#Group indicat.#Pickup#phs B##1";}:IEXV_SPS_BO;
+ 00756:  
+ 00757:       (* 0040 - F06_F002.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL3 *)
+ 00758:       EXV_SPS_0040   {COMMENT := "F06_F002.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDL3";DESC := "0##Application#13.8 KV#Group indicat.#Pickup#phs C##1";}:IEXV_SPS_BO;
+ 00759:  
+ 00760:       (* 0041 - F06_F002.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDNeut *)
+ 00761:       EXV_SPS_0041   {COMMENT := "F06_F002.Application.FG2_PowerTransformerSide.FB1_PTRC_FG_TransformerSide_3ph.Str.ACDNeut";DESC := "0##Application#13.8 KV#Group indicat.#Pickup#gnd##1";}:IEXV_SPS_BO;
+ 00762:  
+ 00763:       (* 0042 - F06_F002.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL1 *)
+ 00764:       EXV_SPS_0042   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL1";DESC := "0##Application#Transformer diff. 1#Group indicat.#Pickup#phs A##1";}:IEXV_SPS_BO;
+ 00765:  
+ 00766:       (* 0043 - F06_F002.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL2 *)
+ 00767:       EXV_SPS_0043   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL2";DESC := "0##Application#Transformer diff. 1#Group indicat.#Pickup#phs B##1";}:IEXV_SPS_BO;
+ 00768:  
+ 00769:       (* 0044 - F06_F002.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL3 *)
+ 00770:       EXV_SPS_0044   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FB1_PTRC_FG_Transformer_3ph.Str.ACDL3";DESC := "0##Application#Transformer diff. 1#Group indicat.#Pickup#phs C##1";}:IEXV_SPS_BO;
+ 00771:  
+ 00772:       (* 0045 - F06_F002.Application.FG1_PowerTransformerStarpoint.FB1_PTRC_FGStandard.Str.ACDGeneral *)
+ 00773:       EXV_SPS_0045   {COMMENT := "F06_F002.Application.FG1_PowerTransformerStarpoint.FB1_PTRC_FGStandard.Str.ACDGeneral";DESC := "0##Application#51 G#Group indicat.#Pickup#general##1";}:IEXV_SPS_BO;
+ 00774:  
+ 00775:       (* 0046 - F06_F002.Application.FG2_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral *)
+ 00776:       EXV_SPS_0046   {COMMENT := "F06_F002.Application.FG2_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral";DESC := "0##Application#Interruptor LV#Trip logic#Trip indication#general##1";}:IEXV_SPS_BO;
+ 00777:  END_VAR
+ 00778:  
+ 00779:       EXV_SPS_0020        (LNK := 20);
+                                CHART_830e140f_4d28_49ac_9621_b61b6ef2ad33:
+00000474  182A1400FA000000          MOVE.W    #20,250(DP)
+0000047C  04B12C000000FA000000      VCALL     IEXV_SPS_SS,#250
+ 00780:  
+ 00781:       EXV_SPS_0021        (LNK := 21);
+00000486  182A150006010000          MOVE.W    #21,262(DP)
+0000048E  04B12C00000006010000      VCALL     IEXV_SPS_SS,#262
+ 00782:  
+ 00783:       EXV_SPS_0023        (LNK := 23);
+00000498  182A17001E010000          MOVE.W    #23,286(DP)
+000004A0  04B12C0000001E010000      VCALL     IEXV_SPS_SS,#286
+ 00784:  
+ 00785:       EXV_SPS_0025        (LNK := 25);
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 18
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+000004AA  182A190036010000          MOVE.W    #25,310(DP)
+000004B2  04B12C00000036010000      VCALL     IEXV_SPS_SS,#310
+ 00786:  
+ 00787:       EXV_SPS_0026        (LNK := 26);
+000004BC  182A1A0042010000          MOVE.W    #26,322(DP)
+000004C4  04B12C00000042010000      VCALL     IEXV_SPS_SS,#322
+ 00788:  
+ 00789:       EXV_SPS_0029        (LNK := 29);
+000004CE  182A1D0066010000          MOVE.W    #29,358(DP)
+000004D6  04B10E00000066010000      VCALL     IEXV_SPS_BO,#358
+ 00790:  
+ 00791:       EXV_SPS_0034        (LNK := 34);
+000004E0  182A220098010000          MOVE.W    #34,408(DP)
+000004E8  04B10E00000098010000      VCALL     IEXV_SPS_BO,#408
+ 00792:  
+ 00793:       EXV_SPS_0035        (LNK := 35);
+000004F2  182A2300A2010000          MOVE.W    #35,418(DP)
+000004FA  04B10E000000A2010000      VCALL     IEXV_SPS_BO,#418
+ 00794:  
+ 00795:       EXV_SPS_0036        (LNK := 36);
+00000504  182A2400AC010000          MOVE.W    #36,428(DP)
+0000050C  04B10E000000AC010000      VCALL     IEXV_SPS_BO,#428
+ 00796:  
+ 00797:       EXV_SPS_0037        (LNK := 37);
+00000516  182A2500B6010000          MOVE.W    #37,438(DP)
+0000051E  04B10E000000B6010000      VCALL     IEXV_SPS_BO,#438
+ 00798:  
+ 00799:       EXV_SPS_0038        (LNK := 38);
+00000528  182A2600C0010000          MOVE.W    #38,448(DP)
+00000530  04B10E000000C0010000      VCALL     IEXV_SPS_BO,#448
+ 00800:  
+ 00801:       EXV_SPS_0039        (LNK := 39);
+0000053A  182A2700CA010000          MOVE.W    #39,458(DP)
+00000542  04B10E000000CA010000      VCALL     IEXV_SPS_BO,#458
+ 00802:  
+ 00803:       EXV_SPS_0040        (LNK := 40);
+0000054C  182A2800D4010000          MOVE.W    #40,468(DP)
+00000554  04B10E000000D4010000      VCALL     IEXV_SPS_BO,#468
+ 00804:  
+ 00805:       EXV_SPS_0041        (LNK := 41);
+0000055E  182A2900DE010000          MOVE.W    #41,478(DP)
+00000566  04B10E000000DE010000      VCALL     IEXV_SPS_BO,#478
+ 00806:  
+ 00807:       EXV_SPS_0042        (LNK := 42);
+00000570  182A2A00E8010000          MOVE.W    #42,488(DP)
+00000578  04B10E000000E8010000      VCALL     IEXV_SPS_BO,#488
+ 00808:  
+ 00809:       EXV_SPS_0043        (LNK := 43);
+00000582  182A2B00F2010000          MOVE.W    #43,498(DP)
+0000058A  04B10E000000F2010000      VCALL     IEXV_SPS_BO,#498
+ 00810:  
+ 00811:       EXV_SPS_0044        (LNK := 44);
+00000594  182A2C00FC010000          MOVE.W    #44,508(DP)
+0000059C  04B10E000000FC010000      VCALL     IEXV_SPS_BO,#508
+ 00812:  
+ 00813:       EXV_SPS_0045        (LNK := 45);
+000005A6  182A2D0006020000          MOVE.W    #45,518(DP)
+000005AE  04B10E00000006020000      VCALL     IEXV_SPS_BO,#518
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 19
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00814:  
+ 00815:       EXV_SPS_0046        (LNK := 46);
+000005B8  182A2E0010020000          MOVE.W    #46,528(DP)
+000005C0  04B10E00000010020000      VCALL     IEXV_SPS_BO,#528
+ 00816:  
+ 00817:       OR10_1              (X1 := EXV_SPS_0034.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+000005CA  18229A01000000000000      MOVE.W    410(DP),0(DP)
+ 00818:                            X2 := EXV_SPS_0038.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+000005D4  1822C201000002000000      MOVE.W    450(DP),2(DP)
+ 00819:                            X3 := EXV_SPS_0042.VAL(* POSITION := -1*-1: SIZE := 37* -1:   *) ,
+000005DE  1822EA01000004000000      MOVE.W    490(DP),4(DP)
+ 00820:                            X4 := 0,
+000005E8  182A000006000000          MOVE.W    #0,6(DP)
+ 00821:                            X5 := 0,
+000005F0  182A000008000000          MOVE.W    #0,8(DP)
+ 00822:                            X6 := 0,
+000005F8  182A00000A000000          MOVE.W    #0,10(DP)
+ 00823:                            X7 := 0,
+00000600  182A00000C000000          MOVE.W    #0,12(DP)
+ 00824:                            X8 := 0,
+00000608  182A00000E000000          MOVE.W    #0,14(DP)
+ 00825:                            X9 := 0,
+00000610  182A000010000000          MOVE.W    #0,16(DP)
+ 00826:                            X10 := 0);
+00000618  182A000012000000          MOVE.W    #0,18(DP)
+00000620  04B19A00000000000000      VCALL     OR10,#0
+ 00827:  
+ 00828:       OR10_2              (X1 := EXV_SPS_0035.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+0000062A  1822A401000016000000      MOVE.W    420(DP),22(DP)
+ 00829:                            X2 := EXV_SPS_0039.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+00000634  1822CC01000018000000      MOVE.W    460(DP),24(DP)
+ 00830:                            X3 := EXV_SPS_0043.VAL(* POSITION := -1*-1: SIZE := 37* -1:   *) ,
+0000063E  1822F40100001A000000      MOVE.W    500(DP),26(DP)
+ 00831:                            X4 := 0,
+00000648  182A00001C000000          MOVE.W    #0,28(DP)
+ 00832:                            X5 := 0,
+00000650  182A00001E000000          MOVE.W    #0,30(DP)
+ 00833:                            X6 := 0,
+00000658  182A000020000000          MOVE.W    #0,32(DP)
+ 00834:                            X7 := 0,
+00000660  182A000022000000          MOVE.W    #0,34(DP)
+ 00835:                            X8 := 0,
+00000668  182A000024000000          MOVE.W    #0,36(DP)
+ 00836:                            X9 := 0,
+00000670  182A000026000000          MOVE.W    #0,38(DP)
+ 00837:                            X10 := 0);
+00000678  182A000028000000          MOVE.W    #0,40(DP)
+00000680  04B19A00000016000000      VCALL     OR10,#22
+ 00838:  
+ 00839:       OR10_3              (X1 := EXV_SPS_0036.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+0000068A  1822AE0100002C000000      MOVE.W    430(DP),44(DP)
+ 00840:                            X2 := EXV_SPS_0040.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+00000694  1822D60100002E000000      MOVE.W    470(DP),46(DP)
+ 00841:                            X3 := EXV_SPS_0044.VAL(* POSITION := -1*-1: SIZE := 37* -1:   *) ,
+0000069E  1822FE01000030000000      MOVE.W    510(DP),48(DP)
+ 00842:                            X4 := 0,
+000006A8  182A000032000000          MOVE.W    #0,50(DP)
+ 00843:                            X5 := 0,
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 20
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+000006B0  182A000034000000          MOVE.W    #0,52(DP)
+ 00844:                            X6 := 0,
+000006B8  182A000036000000          MOVE.W    #0,54(DP)
+ 00845:                            X7 := 0,
+000006C0  182A000038000000          MOVE.W    #0,56(DP)
+ 00846:                            X8 := 0,
+000006C8  182A00003A000000          MOVE.W    #0,58(DP)
+ 00847:                            X9 := 0,
+000006D0  182A00003C000000          MOVE.W    #0,60(DP)
+ 00848:                            X10 := 0);
+000006D8  182A00003E000000          MOVE.W    #0,62(DP)
+000006E0  04B19A0000002C000000      VCALL     OR10,#44
+ 00849:  
+ 00850:       OR10_4              (X1 := EXV_SPS_0037.VAL(* POSITION := -1*-1: SIZE := 29* -1:   *) ,
+000006EA  1822B801000042000000      MOVE.W    440(DP),66(DP)
+ 00851:                            X2 := EXV_SPS_0041.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+000006F4  1822E001000044000000      MOVE.W    480(DP),68(DP)
+ 00852:                            X3 := EXV_SPS_0045.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+000006FE  18220802000046000000      MOVE.W    520(DP),70(DP)
+ 00853:                            X4 := 0,
+00000708  182A000048000000          MOVE.W    #0,72(DP)
+ 00854:                            X5 := 0,
+00000710  182A00004A000000          MOVE.W    #0,74(DP)
+ 00855:                            X6 := 0,
+00000718  182A00004C000000          MOVE.W    #0,76(DP)
+ 00856:                            X7 := 0,
+00000720  182A00004E000000          MOVE.W    #0,78(DP)
+ 00857:                            X8 := 0,
+00000728  182A000050000000          MOVE.W    #0,80(DP)
+ 00858:                            X9 := 0,
+00000730  182A000052000000          MOVE.W    #0,82(DP)
+ 00859:                            X10 := 0);
+00000738  182A000054000000          MOVE.W    #0,84(DP)
+00000740  04B19A00000042000000      VCALL     OR10,#66
+ 00860:  
+ 00861:       OR10_5              (X1 := EXV_SPS_0029.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+0000074A  18226801000058000000      MOVE.W    360(DP),88(DP)
+ 00862:                            X2 := EXV_SPS_0046.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+00000754  1822120200005A000000      MOVE.W    530(DP),90(DP)
+ 00863:                            X3 := 0,
+0000075E  182A00005C000000          MOVE.W    #0,92(DP)
+ 00864:                            X4 := 0,
+00000766  182A00005E000000          MOVE.W    #0,94(DP)
+ 00865:                            X5 := 0,
+0000076E  182A000060000000          MOVE.W    #0,96(DP)
+ 00866:                            X6 := 0,
+00000776  182A000062000000          MOVE.W    #0,98(DP)
+ 00867:                            X7 := 0,
+0000077E  182A000064000000          MOVE.W    #0,100(DP)
+ 00868:                            X8 := 0,
+00000786  182A000066000000          MOVE.W    #0,102(DP)
+ 00869:                            X9 := 0,
+0000078E  182A000068000000          MOVE.W    #0,104(DP)
+ 00870:                            X10 := 0);
+00000796  182A00006A000000          MOVE.W    #0,106(DP)
+0000079E  04B19A00000058000000      VCALL     OR10,#88
+ 00871:  
+ 00872:  
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 21
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00873:  
+ 00874:  
+ 00875:       CONNECT_6           (IN := EXV_SPS_0020.VAL(* POSITION := -1*-1: SIZE := 41* -1:   *) );
+000007A8  1922FC0000006E000000      MOVE.L    252(DP),110(DP)
+000007B2  04B1E00000006E000000      VCALL     CONNECT,#110
+ 00876:  
+ 00877:       CONNECT_7           (IN := EXV_SPS_0021.VAL(* POSITION := -1*-1: SIZE := 36* -1:   *) );
+000007BC  19220801000076000000      MOVE.L    264(DP),118(DP)
+000007C6  04B1E000000076000000      VCALL     CONNECT,#118
+ 00878:  
+ 00879:       CONNECT_8           (IN := EXV_SPS_0023.VAL(* POSITION := -1*-1: SIZE := 26* -1:   *) );
+000007D0  1922200100007E000000      MOVE.L    288(DP),126(DP)
+000007DA  04B1E00000007E000000      VCALL     CONNECT,#126
+ 00880:  
+ 00881:       CONNECT_9           (IN := EXV_SPS_0025.VAL(* POSITION := -1*-1: SIZE := 43* -1:   *) );
+000007E4  19223801000086000000      MOVE.L    312(DP),134(DP)
+000007EE  04B1E000000086000000      VCALL     CONNECT,#134
+ 00882:  
+ 00883:       CONNECT_10          (IN := EXV_SPS_0026.VAL(* POSITION := -1*-1: SIZE := 45* -1:   *) );
+000007F8  1922440100008E000000      MOVE.L    324(DP),142(DP)
+00000802  04B1E00000008E000000      VCALL     CONNECT,#142
+ 00884:  
+ 00885:       AND10_11            (X1 := OR10_1.Y,
+0000080C  18221400000096000000      MOVE.W    20(DP),150(DP)
+ 00886:                            X2 := OR10_5.Y,
+00000816  18226C00000098000000      MOVE.W    108(DP),152(DP)
+ 00887:                            X3 := 1,
+00000820  182A01009A000000          MOVE.W    #1,154(DP)
+ 00888:                            X4 := 1,
+00000828  182A01009C000000          MOVE.W    #1,156(DP)
+ 00889:                            X5 := 1,
+00000830  182A01009E000000          MOVE.W    #1,158(DP)
+ 00890:                            X6 := 1,
+00000838  182A0100A0000000          MOVE.W    #1,160(DP)
+ 00891:                            X7 := 1,
+00000840  182A0100A2000000          MOVE.W    #1,162(DP)
+ 00892:                            X8 := 1,
+00000848  182A0100A4000000          MOVE.W    #1,164(DP)
+ 00893:                            X9 := 1,
+00000850  182A0100A6000000          MOVE.W    #1,166(DP)
+ 00894:                            X10 := 1);
+00000858  182A0100A8000000          MOVE.W    #1,168(DP)
+00000860  04B14000000096000000      VCALL     AND10,#150
+ 00895:  
+ 00896:       AND10_12            (X1 := OR10_2.Y,
+0000086A  18222A000000AC000000      MOVE.W    42(DP),172(DP)
+ 00897:                            X2 := OR10_5.Y,
+00000874  18226C000000AE000000      MOVE.W    108(DP),174(DP)
+ 00898:                            X3 := 1,
+0000087E  182A0100B0000000          MOVE.W    #1,176(DP)
+ 00899:                            X4 := 1,
+00000886  182A0100B2000000          MOVE.W    #1,178(DP)
+ 00900:                            X5 := 1,
+0000088E  182A0100B4000000          MOVE.W    #1,180(DP)
+ 00901:                            X6 := 1,
+00000896  182A0100B6000000          MOVE.W    #1,182(DP)
+ 00902:                            X7 := 1,
+0000089E  182A0100B8000000          MOVE.W    #1,184(DP)
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 22
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00903:                            X8 := 1,
+000008A6  182A0100BA000000          MOVE.W    #1,186(DP)
+ 00904:                            X9 := 1,
+000008AE  182A0100BC000000          MOVE.W    #1,188(DP)
+ 00905:                            X10 := 1);
+000008B6  182A0100BE000000          MOVE.W    #1,190(DP)
+000008BE  04B140000000AC000000      VCALL     AND10,#172
+ 00906:  
+ 00907:       AND10_13            (X1 := OR10_3.Y,
+000008C8  182240000000C2000000      MOVE.W    64(DP),194(DP)
+ 00908:                            X2 := OR10_5.Y,
+000008D2  18226C000000C4000000      MOVE.W    108(DP),196(DP)
+ 00909:                            X3 := 1,
+000008DC  182A0100C6000000          MOVE.W    #1,198(DP)
+ 00910:                            X4 := 1,
+000008E4  182A0100C8000000          MOVE.W    #1,200(DP)
+ 00911:                            X5 := 1,
+000008EC  182A0100CA000000          MOVE.W    #1,202(DP)
+ 00912:                            X6 := 1,
+000008F4  182A0100CC000000          MOVE.W    #1,204(DP)
+ 00913:                            X7 := 1,
+000008FC  182A0100CE000000          MOVE.W    #1,206(DP)
+ 00914:                            X8 := 1,
+00000904  182A0100D0000000          MOVE.W    #1,208(DP)
+ 00915:                            X9 := 1,
+0000090C  182A0100D2000000          MOVE.W    #1,210(DP)
+ 00916:                            X10 := 1);
+00000914  182A0100D4000000          MOVE.W    #1,212(DP)
+0000091C  04B140000000C2000000      VCALL     AND10,#194
+ 00917:  
+ 00918:       AND10_14            (X1 := OR10_4.Y,
+00000926  182256000000D8000000      MOVE.W    86(DP),216(DP)
+ 00919:                            X2 := OR10_5.Y,
+00000930  18226C000000DA000000      MOVE.W    108(DP),218(DP)
+ 00920:                            X3 := 1,
+0000093A  182A0100DC000000          MOVE.W    #1,220(DP)
+ 00921:                            X4 := 1,
+00000942  182A0100DE000000          MOVE.W    #1,222(DP)
+ 00922:                            X5 := 1,
+0000094A  182A0100E0000000          MOVE.W    #1,224(DP)
+ 00923:                            X6 := 1,
+00000952  182A0100E2000000          MOVE.W    #1,226(DP)
+ 00924:                            X7 := 1,
+0000095A  182A0100E4000000          MOVE.W    #1,228(DP)
+ 00925:                            X8 := 1,
+00000962  182A0100E6000000          MOVE.W    #1,230(DP)
+ 00926:                            X9 := 1,
+0000096A  182A0100E8000000          MOVE.W    #1,232(DP)
+ 00927:                            X10 := 1);
+00000972  182A0100EA000000          MOVE.W    #1,234(DP)
+0000097A  04B140000000D8000000      VCALL     AND10,#216
+ 00928:  
+ 00929:       EXV_SPS_0019        (LNK := 19,
+00000984  182A1300EE000000          MOVE.W    #19,238(DP)
+ 00930:                            VAL := CONNECT_6.OUT(* POSITION := -1*-1: SIZE := 41* -1:   *) );
+0000098C  192272000000F0000000      MOVE.L    114(DP),240(DP)
+00000996  04B122000000EE000000      VCALL     OEXV_SS_SPS,#238
+ 00931:       EXV_SPS_0022        (LNK := 22,
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 23
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+000009A0  182A160012010000          MOVE.W    #22,274(DP)
+ 00932:                            VAL := CONNECT_7.OUT(* POSITION := -1*-1: SIZE := 25* -1:   *) );
+000009A8  19227A00000014010000      MOVE.L    122(DP),276(DP)
+000009B2  04B12200000012010000      VCALL     OEXV_SS_SPS,#274
+ 00933:       EXV_SPS_0024        (LNK := 24,
+000009BC  182A18002A010000          MOVE.W    #24,298(DP)
+ 00934:                            VAL := CONNECT_8.OUT(* POSITION := -1*-1: SIZE := 30* -1:   *) );
+000009C4  1922820000002C010000      MOVE.L    130(DP),300(DP)
+000009CE  04B1220000002A010000      VCALL     OEXV_SS_SPS,#298
+ 00935:       EXV_SPS_0027        (LNK := 27,
+000009D8  182A1B004E010000          MOVE.W    #27,334(DP)
+ 00936:                            VAL := CONNECT_9.OUT(* POSITION := -1*-1: SIZE := 28* -1:   *) );
+000009E0  19228A00000050010000      MOVE.L    138(DP),336(DP)
+000009EA  04B1220000004E010000      VCALL     OEXV_SS_SPS,#334
+ 00937:       EXV_SPS_0028        (LNK := 28,
+000009F4  182A1C005A010000          MOVE.W    #28,346(DP)
+ 00938:                            VAL := CONNECT_10.OUT(* POSITION := -1*-1: SIZE := 31* -1:   *) );
+000009FC  1922920000005C010000      MOVE.L    146(DP),348(DP)
+00000A06  04B1220000005A010000      VCALL     OEXV_SS_SPS,#346
+ 00939:       EXV_SPS_0030        (LNK := 30,
+00000A10  182A1E0070010000          MOVE.W    #30,368(DP)
+ 00940:                            VAL := AND10_11.Y(* POSITION := -1*-1: SIZE := 33* -1:   *) );
+00000A18  1822AA00000072010000      MOVE.W    170(DP),370(DP)
+00000A22  04B11800000070010000      VCALL     OEXV_BO_SPS,#368
+ 00941:       EXV_SPS_0031        (LNK := 31,
+00000A2C  182A1F007A010000          MOVE.W    #31,378(DP)
+ 00942:                            VAL := AND10_12.Y(* POSITION := -1*-1: SIZE := 33* -1:   *) );
+00000A34  1822C00000007C010000      MOVE.W    192(DP),380(DP)
+00000A3E  04B1180000007A010000      VCALL     OEXV_BO_SPS,#378
+ 00943:       EXV_SPS_0032        (LNK := 32,
+00000A48  182A200084010000          MOVE.W    #32,388(DP)
+ 00944:                            VAL := AND10_13.Y(* POSITION := -1*-1: SIZE := 33* -1:   *) );
+00000A50  1822D600000086010000      MOVE.W    214(DP),390(DP)
+00000A5A  04B11800000084010000      VCALL     OEXV_BO_SPS,#388
+ 00945:       EXV_SPS_0033        (LNK := 33,
+00000A64  182A21008E010000          MOVE.W    #33,398(DP)
+ 00946:                            VAL := AND10_14.Y(* POSITION := -1*-1: SIZE := 33* -1:   *) );
+00000A6C  1822EC00000090010000      MOVE.W    236(DP),400(DP)
+00000A76  04B1180000008E010000      VCALL     OEXV_BO_SPS,#398
+ 00947:  
+ 00948:  (* COMMENT_TEXT;{X=65,Y=1};{Width=22, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;ALARMAS F002 *)
+ 00949:  (* COMMENT_TEXT;{X=60,Y=72};{Width=33, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;DISPAROS POR FASES *)
+ 00950:  
+ 00951:  END_PROGRAM
+00000A80  010A0000                  RETB      #0
+ 00952:  
+ 00953:                                                    (* ---------- Program : CHART_fb64a5a6_930c_4c0b_8b68_ba5c24b5787b ----------  *)
+ 00954:  
+ 00955:  PROGRAM CHART_fb64a5a6_930c_4c0b_8b68_ba5c24b5787b
+ 00956:  {COMMENT := "Lógico 50BF";DESC := "";}
+ 00957:  (* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+ 00958:  (* PartitionInfo;Id := 1,Name := Partition_1,Comment :=      *)
+ 00959:  VAR
+ 00960:  
+ 00961:  
+ 00962:  
+ 00963:       (* IO_IOVISIBILITY;OR10_1;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 00964:                 
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 24
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 00965:       (* PartitionInfo;PartitionID OR10_1;1  *)
+ 00966:  OR10_1          { COMMENT := 'or10_1'; POSITION := 68,6; SIZE := 12, 12; } :OR10;         
+ 00967:  
+ 00968:       (* 0047 - F06_F002.Application.FG1_UserDef.FB4_Universal.Init3p *)
+ 00969:       EXV_SPS_0047   {COMMENT := "F06_F002.Application.FG1_UserDef.FB4_Universal.Init3p";DESC := "0##Application#Usuario#GGIO1#Arranque 50BF F003##1";}:IEXV_SPS_BO;
+ 00970:  
+ 00971:       (* 0048 - F06_F002.Application.FG1_Breaker_3pol.FB1_RBRF_Adv_3pol.Initiation *)
+ 00972:       EXV_SPS_0048   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_RBRF_Adv_3pol.Initiation";DESC := "0##Application#Interruptor HV#50BF#>Start##1";}:OEXV_BO_SPS;
+ 00973:  
+ 00974:       (* 0049 - F06_F002.Application.FG1_UserDef.FB4_Universal.OpEx86 *)
+ 00975:       EXV_SPS_0049   {COMMENT := "F06_F002.Application.FG1_UserDef.FB4_Universal.OpEx86";DESC := "0##Application#Usuario#GGIO1#Opero 86T##1";}:IEXV_SPS_BO;
+ 00976:  END_VAR
+ 00977:  
+ 00978:       EXV_SPS_0047        (LNK := 47);
+                                CHART_fb64a5a6_930c_4c0b_8b68_ba5c24b5787b:
+00000A84  182A2F0016000000          MOVE.W    #47,22(DP)
+00000A8C  04B10E00000016000000      VCALL     IEXV_SPS_BO,#22
+ 00979:  
+ 00980:       EXV_SPS_0049        (LNK := 49);
+00000A96  182A31002A000000          MOVE.W    #49,42(DP)
+00000A9E  04B10E0000002A000000      VCALL     IEXV_SPS_BO,#42
+ 00981:  
+ 00982:       OR10_1              (X1 := EXV_SPS_0047.VAL(* POSITION := -1*-1: SIZE := 29* -1:   *) ,
+00000AA8  18221800000000000000      MOVE.W    24(DP),0(DP)
+ 00983:                            X2 := EXV_SPS_0049.VAL(* POSITION := -1*-1: SIZE := 25* -1:   *) ,
+00000AB2  18222C00000002000000      MOVE.W    44(DP),2(DP)
+ 00984:                            X3 := 0,
+00000ABC  182A000004000000          MOVE.W    #0,4(DP)
+ 00985:                            X4 := 0,
+00000AC4  182A000006000000          MOVE.W    #0,6(DP)
+ 00986:                            X5 := 0,
+00000ACC  182A000008000000          MOVE.W    #0,8(DP)
+ 00987:                            X6 := 0,
+00000AD4  182A00000A000000          MOVE.W    #0,10(DP)
+ 00988:                            X7 := 0,
+00000ADC  182A00000C000000          MOVE.W    #0,12(DP)
+ 00989:                            X8 := 0,
+00000AE4  182A00000E000000          MOVE.W    #0,14(DP)
+ 00990:                            X9 := 0,
+00000AEC  182A000010000000          MOVE.W    #0,16(DP)
+ 00991:                            X10 := 0);
+00000AF4  182A000012000000          MOVE.W    #0,18(DP)
+00000AFC  04B19A00000000000000      VCALL     OR10,#0
+ 00992:  
+ 00993:       EXV_SPS_0048        (LNK := 48,
+00000B06  182A300020000000          MOVE.W    #48,32(DP)
+ 00994:                            VAL := OR10_1.Y(* POSITION := -1*-1: SIZE := 26* -1:   *) );
+00000B0E  18221400000022000000      MOVE.W    20(DP),34(DP)
+00000B18  04B11800000020000000      VCALL     OEXV_BO_SPS,#32
+ 00995:  
+ 00996:  (* COMMENT_TEXT;{X=61,Y=2};{Width=26, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;ARRANQUES 50BF *)
+ 00997:  
+ 00998:  END_PROGRAM
+00000B22  010A0000                  RETB      #0
+ 00999:  
+ 01000:                                                    (* ---------- Program : CHART_f9f39a58_b729_4fe4_acbc_feeb6b36c4c7 ----------  *)
+ 01001:  
+ 01002:  PROGRAM CHART_f9f39a58_b729_4fe4_acbc_feeb6b36c4c7
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 25
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 01003:  {COMMENT := "Lógico Interlocking";DESC := "";}
+ 01004:  (* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+ 01005:  (* PartitionInfo;Id := 1,Name := Partition_1,Comment :=       *)
+ 01006:  VAR
+ 01007:  
+ 01008:  
+ 01009:  
+ 01010:       (* IO_IOVISIBILITY;NOR10_1;X4:X5:X6:X7:X8:X9:X10: *)
+ 01011:                 
+ 01012:       (* PartitionInfo;PartitionID NOR10_1;1  *)
+ 01013:  NOR10_1         { COMMENT := 'nor10_1'; POSITION := 58,7; SIZE := 12, 12; } :NOR10;        
+ 01014:  
+ 01015:  
+ 01016:       (* IO_IOVISIBILITY;AND10_2;X4:X5:X6:X7:X8:X9:X10: *)
+ 01017:                 
+ 01018:       (* PartitionInfo;PartitionID AND10_2;1  *)
+ 01019:  AND10_2         { COMMENT := 'and10_1'; POSITION := 80,9; SIZE := 12, 12; } :AND10;        
+ 01020:  
+ 01021:       (* 0050 - F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.VTmcb *)
+ 01022:       EXV_SPS_0050   {COMMENT := "F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_3ph.FB1_SMCB.VTmcb";DESC := "0##Application#Power system#TP B1 69kV V-3ph#VT miniatureCB#>Open##1";}:IEXV_SPS_BO;
+ 01023:  
+ 01024:       (* 0051 - F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.VTmcb *)
+ 01025:       EXV_SPS_0051   {COMMENT := "F06_F002.Application.FG_PowerSystem.FN1_MUVoltage_1ph.FB1_SMCB.VTmcb";DESC := "0##Application#Power system#TP B 13.8kV V-1ph#VT miniatureCB#>Open##1";}:IEXV_SPS_BO;
+ 01026:  
+ 01027:       (* 0052 - F06_F002.Application.FG1_Breaker_3pol.FB1_CILO.EnaCls *)
+ 01028:       EXV_SPS_0052   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_CILO.EnaCls";DESC := "0##Application#Interruptor HV#Interlocking#>Enable closing##1";}:OEXV_BO_SPS;
+ 01029:  
+ 01030:       (* 0053 - F06_F002.Application.FG1_UserDef.FB6_Universal.ColAlm *)
+ 01031:       EXV_SPS_0053   {COMMENT := "F06_F002.Application.FG1_UserDef.FB6_Universal.ColAlm";DESC := "0##Application#Usuario#SCBR1#Falla SCD1##1";}:IEXV_SPS_BO;
+ 01032:  
+ 01033:       (* 0054 - F06_F002.Application.FG1_UserDef.FB4_Universal.OpEx86 *)
+ 01034:       EXV_SPS_0054   {COMMENT := "F06_F002.Application.FG1_UserDef.FB4_Universal.OpEx86";DESC := "0##Application#Usuario#GGIO1#Opero 86T##1";}:IEXV_SPS_BO;
+ 01035:  
+ 01036:       (* 0055 - F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff *)
+ 01037:       EXV_SPS_0055   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff";DESC := "0##Application#Interruptor HV#Circuit break.#Position#open##1";}:IEXV_SPS_BO;
+ 01038:  END_VAR
+ 01039:  
+ 01040:       EXV_SPS_0050        (LNK := 50);
+                                CHART_f9f39a58_b729_4fe4_acbc_feeb6b36c4c7:
+00000B26  182A32002C000000          MOVE.W    #50,44(DP)
+00000B2E  04B10E0000002C000000      VCALL     IEXV_SPS_BO,#44
+ 01041:  
+ 01042:       EXV_SPS_0051        (LNK := 51);
+00000B38  182A330036000000          MOVE.W    #51,54(DP)
+00000B40  04B10E00000036000000      VCALL     IEXV_SPS_BO,#54
+ 01043:  
+ 01044:       EXV_SPS_0053        (LNK := 53);
+00000B4A  182A35004A000000          MOVE.W    #53,74(DP)
+00000B52  04B10E0000004A000000      VCALL     IEXV_SPS_BO,#74
+ 01045:  
+ 01046:       EXV_SPS_0054        (LNK := 54);
+00000B5C  182A360054000000          MOVE.W    #54,84(DP)
+00000B64  04B10E00000054000000      VCALL     IEXV_SPS_BO,#84
+ 01047:  
+ 01048:       EXV_SPS_0055        (LNK := 55);
+00000B6E  182A37005E000000          MOVE.W    #55,94(DP)
+00000B76  04B10E0000005E000000      VCALL     IEXV_SPS_BO,#94
+ 01049:  
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 26
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 01050:       NOR10_1             (X1 := EXV_SPS_0053.VAL(* POSITION := -1*-1: SIZE := 25* -1:   *) ,
+00000B80  18224C00000000000000      MOVE.W    76(DP),0(DP)
+ 01051:                            X2 := EXV_SPS_0050.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+00000B8A  18222E00000002000000      MOVE.W    46(DP),2(DP)
+ 01052:                            X3 := EXV_SPS_0051.VAL(* POSITION := -1*-1: SIZE := 39* -1:   *) ,
+00000B94  18223800000004000000      MOVE.W    56(DP),4(DP)
+ 01053:                            X4 := 0,
+00000B9E  182A000006000000          MOVE.W    #0,6(DP)
+ 01054:                            X5 := 0,
+00000BA6  182A000008000000          MOVE.W    #0,8(DP)
+ 01055:                            X6 := 0,
+00000BAE  182A00000A000000          MOVE.W    #0,10(DP)
+ 01056:                            X7 := 0,
+00000BB6  182A00000C000000          MOVE.W    #0,12(DP)
+ 01057:                            X8 := 0,
+00000BBE  182A00000E000000          MOVE.W    #0,14(DP)
+ 01058:                            X9 := 0,
+00000BC6  182A000010000000          MOVE.W    #0,16(DP)
+ 01059:                            X10 := 0);
+00000BCE  182A000012000000          MOVE.W    #0,18(DP)
+00000BD6  04B1F800000000000000      VCALL     NOR10,#0
+ 01060:  
+ 01061:       AND10_2             (X1 := NOR10_1.Y,
+00000BE0  18221400000016000000      MOVE.W    20(DP),22(DP)
+ 01062:                            X2 := EXV_SPS_0055.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) ,
+00000BEA  18226000000018000000      MOVE.W    96(DP),24(DP)
+ 01063:                            X3 := NOT EXV_SPS_0054.VAL(* POSITION := -1*-1: SIZE := 25* -1:   *) ,
+00000BF4  0E0256000000              LD.W      86(DP)
+00000BFA  4805                      NOT.W     AC
+00000BFC  3FA50100                  AND.W     AC,#1
+00000C00  13021A000000              ST.W      26(DP)
+ 01064:                            X4 := 1,
+00000C06  182A01001C000000          MOVE.W    #1,28(DP)
+ 01065:                            X5 := 1,
+00000C0E  182A01001E000000          MOVE.W    #1,30(DP)
+ 01066:                            X6 := 1,
+00000C16  182A010020000000          MOVE.W    #1,32(DP)
+ 01067:                            X7 := 1,
+00000C1E  182A010022000000          MOVE.W    #1,34(DP)
+ 01068:                            X8 := 1,
+00000C26  182A010024000000          MOVE.W    #1,36(DP)
+ 01069:                            X9 := 1,
+00000C2E  182A010026000000          MOVE.W    #1,38(DP)
+ 01070:                            X10 := 1);
+00000C36  182A010028000000          MOVE.W    #1,40(DP)
+00000C3E  04B14000000016000000      VCALL     AND10,#22
+ 01071:  
+ 01072:       EXV_SPS_0052        (LNK := 52,
+00000C48  182A340040000000          MOVE.W    #52,64(DP)
+ 01073:                            VAL := AND10_2.Y(* POSITION := -1*-1: SIZE := 35* -1:   *) );
+00000C50  18222A00000042000000      MOVE.W    42(DP),66(DP)
+00000C5A  04B11800000040000000      VCALL     OEXV_BO_SPS,#64
+ 01074:  
+ 01075:  (* COMMENT_TEXT;{X=55,Y=2};{Width=37, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;PERMISIVO CIERRE Q0 HV *)
+ 01076:  
+ 01077:  END_PROGRAM
+00000C64  010A0000                  RETB      #0
+ 01078:  
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 27
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 01079:                                                    (* ---------- Program : CHART_f31921e5_3b60_4a9a_9f46_b5aa012ecf30 ----------  *)
+ 01080:  
+ 01081:  PROGRAM CHART_f31921e5_3b60_4a9a_9f46_b5aa012ecf30
+ 01082:  {COMMENT := "Lógico Posiciones";DESC := "";}
+ 01083:  (* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+ 01084:  (* PartitionInfo;Id := 1,Name := Partition_1,Comment :=      *)
+ 01085:  VAR
+ 01086:  
+ 01087:  
+ 01088:  
+ 01089:       (* IO_IOVISIBILITY;OR10_1;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 01090:                 
+ 01091:       (* PartitionInfo;PartitionID OR10_1;1  *)
+ 01092:  OR10_1          { COMMENT := 'or10_5'; POSITION := 56,7; SIZE := 12, 12; } :OR10;         
+ 01093:  
+ 01094:  
+ 01095:       (* IO_IOVISIBILITY;OR10_2;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 01096:                 
+ 01097:       (* PartitionInfo;PartitionID OR10_2;1  *)
+ 01098:  OR10_2          { COMMENT := 'or10_6'; POSITION := 56,14; SIZE := 12, 12; } :OR10;         
+ 01099:  
+ 01100:                 
+ 01101:       (* PartitionInfo;PartitionID BUILD_Q_3;1  *)
+ 01102:  BUILD_Q_3       { COMMENT := 'build_q_1'; POSITION := 56,21; SIZE := 12, 12; } :BUILD_Q;      
+ 01103:  
+ 01104:                 
+ 01105:       (* PartitionInfo;PartitionID BUILD_Q_4;1  *)
+ 01106:  BUILD_Q_4       { COMMENT := 'build_q_2'; POSITION := 49,40; SIZE := 12, 12; } :BUILD_Q;      
+ 01107:  
+ 01108:                 
+ 01109:       (* PartitionInfo;PartitionID BUILD_DPS_5;1  *)
+ 01110:  BUILD_DPS_5     { COMMENT := 'build_dps_5'; POSITION := 79,7; SIZE := 12, 12; } :BUILD_DPS;    
+ 01111:  
+ 01112:                 
+ 01113:       (* PartitionInfo;PartitionID BUILD_DPS_6;1  *)
+ 01114:  BUILD_DPS_6     { COMMENT := 'build_dps_1'; POSITION := 69,35; SIZE := 12, 12; } :BUILD_DPS;    
+ 01115:  
+ 01116:       (* 0056 - F06_F002.Application.FG1_UserDef.FB10_Universal.RxPos1.DPS_StatusOn *)
+ 01117:       EXV_SPS_0056   {COMMENT := "F06_F002.Application.FG1_UserDef.FB10_Universal.RxPos1.DPS_StatusOn";DESC := "0##Application#Usuario#GOOSE#Posicion 6T6-Q0#closed##1";}:IEXV_SPS_BO;
+ 01118:  
+ 01119:       (* 0057 - F06_F002.Application.FG1_UserDef.FB10_Universal.RxPos1.DPS_StatusOff *)
+ 01120:       EXV_SPS_0057   {COMMENT := "F06_F002.Application.FG1_UserDef.FB10_Universal.RxPos1.DPS_StatusOff";DESC := "0##Application#Usuario#GOOSE#Posicion 6T6-Q0#open##1";}:IEXV_SPS_BO;
+ 01121:  
+ 01122:       (* 0058 - F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.XCBR1 *)
+ 01123:       EXV_SPS_0058   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.XCBR1";DESC := "0##Application#Interruptor HV#Circuit break.#Q0 Cerrado##1";}:IEXV_SPS_BO;
+ 01124:  
+ 01125:       (* 0059 - F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.Pos *)
+ 01126:       EXV_DPS_0059   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.Pos";DESC := "0##Application#Interruptor HV#Circuit break.#Position##1";}:OEXV_DS_DPS;
+ 01127:  
+ 01128:       (* 0060 - F06_F002.Application.FG1_UserDef.FB10_Universal.RxPos.DPS_StatusOn *)
+ 01129:       EXV_SPS_0060   {COMMENT := "F06_F002.Application.FG1_UserDef.FB10_Universal.RxPos.DPS_StatusOn";DESC := "0##Application#Usuario#GOOSE#Posicion 9T7-Q0#closed##1";}:IEXV_SPS_BO;
+ 01130:  
+ 01131:       (* 0061 - F06_F002.Application.FG2_Breaker_3pol.FB1_XCBR.Pos *)
+ 01132:       EXV_DPS_0061   {COMMENT := "F06_F002.Application.FG2_Breaker_3pol.FB1_XCBR.Pos";DESC := "0##Application#Interruptor LV#Circuit break.#Position##1";}:OEXV_DS_DPS;
+ 01133:  END_VAR
+ 01134:  
+ 01135:       EXV_SPS_0056        (LNK := 56);
+                                CHART_f31921e5_3b60_4a9a_9f46_b5aa012ecf30:
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 28
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+00000C68  182A380058000000          MOVE.W    #56,88(DP)
+00000C70  04B10E00000058000000      VCALL     IEXV_SPS_BO,#88
+ 01136:  
+ 01137:       EXV_SPS_0057        (LNK := 57);
+00000C7A  182A390062000000          MOVE.W    #57,98(DP)
+00000C82  04B10E00000062000000      VCALL     IEXV_SPS_BO,#98
+ 01138:  
+ 01139:       EXV_SPS_0058        (LNK := 58);
+00000C8C  182A3A006C000000          MOVE.W    #58,108(DP)
+00000C94  04B10E0000006C000000      VCALL     IEXV_SPS_BO,#108
+ 01140:  
+ 01141:       EXV_SPS_0060        (LNK := 60);
+00000C9E  182A3C0082000000          MOVE.W    #60,130(DP)
+00000CA6  04B10E00000082000000      VCALL     IEXV_SPS_BO,#130
+ 01142:  
+ 01143:       OR10_1              (X1 := EXV_SPS_0056.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+00000CB0  18225A00000000000000      MOVE.W    90(DP),0(DP)
+ 01144:                            X2 := EXV_SPS_0058.VAL(* POSITION := -1*-1: SIZE := 33* -1:   *) ,
+00000CBA  18226E00000002000000      MOVE.W    110(DP),2(DP)
+ 01145:                            X3 := 0,
+00000CC4  182A000004000000          MOVE.W    #0,4(DP)
+ 01146:                            X4 := 0,
+00000CCC  182A000006000000          MOVE.W    #0,6(DP)
+ 01147:                            X5 := 0,
+00000CD4  182A000008000000          MOVE.W    #0,8(DP)
+ 01148:                            X6 := 0,
+00000CDC  182A00000A000000          MOVE.W    #0,10(DP)
+ 01149:                            X7 := 0,
+00000CE4  182A00000C000000          MOVE.W    #0,12(DP)
+ 01150:                            X8 := 0,
+00000CEC  182A00000E000000          MOVE.W    #0,14(DP)
+ 01151:                            X9 := 0,
+00000CF4  182A000010000000          MOVE.W    #0,16(DP)
+ 01152:                            X10 := 0);
+00000CFC  182A000012000000          MOVE.W    #0,18(DP)
+00000D04  04B19A00000000000000      VCALL     OR10,#0
+ 01153:  
+ 01154:       OR10_2              (X1 := NOT EXV_SPS_0058.VAL(* POSITION := -1*-1: SIZE := 33* -1:   *) ,
+00000D0E  0E026E000000              LD.W      110(DP)
+00000D14  4805                      NOT.W     AC
+00000D16  3FA50100                  AND.W     AC,#1
+00000D1A  130216000000              ST.W      22(DP)
+ 01155:                            X2 := EXV_SPS_0057.VAL(* POSITION := -1*-1: SIZE := 30* -1:   *) ,
+00000D20  18226400000018000000      MOVE.W    100(DP),24(DP)
+ 01156:                            X3 := 0,
+00000D2A  182A00001A000000          MOVE.W    #0,26(DP)
+ 01157:                            X4 := 0,
+00000D32  182A00001C000000          MOVE.W    #0,28(DP)
+ 01158:                            X5 := 0,
+00000D3A  182A00001E000000          MOVE.W    #0,30(DP)
+ 01159:                            X6 := 0,
+00000D42  182A000020000000          MOVE.W    #0,32(DP)
+ 01160:                            X7 := 0,
+00000D4A  182A000022000000          MOVE.W    #0,34(DP)
+ 01161:                            X8 := 0,
+00000D52  182A000024000000          MOVE.W    #0,36(DP)
+ 01162:                            X9 := 0,
+00000D5A  182A000026000000          MOVE.W    #0,38(DP)
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 29
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 01163:                            X10 := 0);
+00000D62  182A000028000000          MOVE.W    #0,40(DP)
+00000D6A  04B19A00000016000000      VCALL     OR10,#22
+ 01164:  
+ 01165:       BUILD_Q_3           (GOOD := 1,
+00000D74  182A01002C000000          MOVE.W    #1,44(DP)
+ 01166:                            BAD := 0);
+00000D7C  182A00002E000000          MOVE.W    #0,46(DP)
+00000D84  04B1440100002C000000      VCALL     BUILD_Q,#44
+ 01167:  
+ 01168:       BUILD_Q_4           (GOOD := 1,
+00000D8E  182A010034000000          MOVE.W    #1,52(DP)
+ 01169:                            BAD := 0);
+00000D96  182A000036000000          MOVE.W    #0,54(DP)
+00000D9E  04B14401000034000000      VCALL     BUILD_Q,#52
+ 01170:  
+ 01171:       BUILD_DPS_5         (IS_ON := OR10_1.Y,
+00000DA8  1822140000003C000000      MOVE.W    20(DP),60(DP)
+ 01172:                            IS_OFF := OR10_2.Y,
+00000DB2  18222A0000003E000000      MOVE.W    42(DP),62(DP)
+ 01173:                            BAD_00 := 0,
+00000DBC  182A000040000000          MOVE.W    #0,64(DP)
+ 01174:                            QL := BUILD_Q_3.QL);
+00000DC4  18223000000042000000      MOVE.W    48(DP),66(DP)
+00000DCE  04B14E0100003C000000      VCALL     BUILD_DPS,#60
+ 01175:  
+ 01176:       BUILD_DPS_6         (IS_ON := EXV_SPS_0060.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+00000DD8  1822840000004A000000      MOVE.W    132(DP),74(DP)
+ 01177:                            IS_OFF := NOT EXV_SPS_0060.VAL(* POSITION := -1*-1: SIZE := 31* -1:   *) ,
+00000DE2  0E0284000000              LD.W      132(DP)
+00000DE8  4805                      NOT.W     AC
+00000DEA  3FA50100                  AND.W     AC,#1
+00000DEE  13024C000000              ST.W      76(DP)
+ 01178:                            BAD_00 := 0,
+00000DF4  182A00004E000000          MOVE.W    #0,78(DP)
+ 01179:                            QL := BUILD_Q_4.QL);
+00000DFC  18223800000050000000      MOVE.W    56(DP),80(DP)
+00000E06  04B14E0100004A000000      VCALL     BUILD_DPS,#74
+ 01180:  
+ 01181:       EXV_DPS_0059        (LNK := 59,
+00000E10  182A3B0076000000          MOVE.W    #59,118(DP)
+ 01182:                            VAL := BUILD_DPS_5.OUT(* POSITION := -1*-1: SIZE := 32* -1:   *) );
+00000E18  19224400000078000000      MOVE.L    68(DP),120(DP)
+00000E22  04B13600000076000000      VCALL     OEXV_DS_DPS,#118
+ 01183:       EXV_DPS_0061        (LNK := 61,
+00000E2C  182A3D008C000000          MOVE.W    #61,140(DP)
+ 01184:                            VAL := BUILD_DPS_6.OUT(* POSITION := -1*-1: SIZE := 32* -1:   *) );
+00000E34  1922520000008E000000      MOVE.L    82(DP),142(DP)
+00000E3E  04B1360000008C000000      VCALL     OEXV_DS_DPS,#140
+ 01185:  
+ 01186:  (* COMMENT_TEXT;{X=62,Y=2};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;POSICIÓN Q0 HV *)
+ 01187:  (* COMMENT_TEXT;{X=60,Y=30};{Width=27, Height=3};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;POSICIÓN Q0 LV *)
+ 01188:  
+ 01189:  END_PROGRAM
+00000E48  010A0000                  RETB      #0
+ 01190:  
+ 01191:                                                    (* ---------- Program : CHART_d861becd_f029_452c_b109_4922e0f15c5d ----------  *)
+ 01192:  
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 30
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 01193:  PROGRAM CHART_d861becd_f029_452c_b109_4922e0f15c5d
+ 01194:  {COMMENT := "Lógico Oscilografía";DESC := "";}
+ 01195:  (* ChartLayout;PageSize := A4,Rows := 3,Columns := 2,MarginMode := WithMargins,MarginSize := 37,MarginLines := 1 *)
+ 01196:  (* PartitionInfo;Id := 1,Name := Partition_1,Comment :=      *)
+ 01197:  VAR
+ 01198:  
+ 01199:  
+ 01200:                 
+ 01201:       (* PartitionInfo;PartitionID R_TRIG_1;1  *)
+ 01202:  R_TRIG_1        { COMMENT := 'r_trig_1'; POSITION := 47,8; SIZE := 12, 12; } :R_TRIG;       
+ 01203:  
+ 01204:                 
+ 01205:       (* PartitionInfo;PartitionID R_TRIG_2;1  *)
+ 01206:  R_TRIG_2        { COMMENT := 'r_trig_2'; POSITION := 47,13; SIZE := 12, 12; } :R_TRIG;       
+ 01207:  
+ 01208:                 
+ 01209:       (* PartitionInfo;PartitionID R_TRIG_3;1  *)
+ 01210:  R_TRIG_3        { COMMENT := 'r_trig_3'; POSITION := 47,18; SIZE := 12, 12; } :R_TRIG;       
+ 01211:  
+ 01212:                 
+ 01213:       (* PartitionInfo;PartitionID R_TRIG_4;1  *)
+ 01214:  R_TRIG_4        { COMMENT := 'r_trig_4'; POSITION := 47,23; SIZE := 12, 12; } :R_TRIG;       
+ 01215:  
+ 01216:  
+ 01217:       (* IO_IOVISIBILITY;OR10_5;X6:X7:X8:X9:X10: *)
+ 01218:                 
+ 01219:       (* PartitionInfo;PartitionID OR10_5;1  *)
+ 01220:  OR10_5          { COMMENT := 'or10_1'; POSITION := 72,8; SIZE := 12, 12; } :OR10;         
+ 01221:  
+ 01222:  
+ 01223:       (* IO_IOVISIBILITY;AND10_6;X4:X5:X6:X7:X8:X9:X10: *)
+ 01224:                 
+ 01225:       (* PartitionInfo;PartitionID AND10_6;1  *)
+ 01226:  AND10_6         { COMMENT := 'and10_1'; POSITION := 92,8; SIZE := 12, 12; } :AND10;        
+ 01227:  
+ 01228:  
+ 01229:       (* IO_IOVISIBILITY;OR10_7;X3:X4:X5:X6:X7:X8:X9:X10: *)
+ 01230:                 
+ 01231:       (* PartitionInfo;PartitionID OR10_7;1  *)
+ 01232:  OR10_7          { COMMENT := 'or10_2'; POSITION := 76,33; SIZE := 12, 12; } :OR10;         
+ 01233:  
+ 01234:       (* 0062 - F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral *)
+ 01235:       EXV_SPS_0062   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral";DESC := "0##Application#Interruptor HV#Trip logic#Trip indication#general##1";}:IEXV_SPS_BO;
+ 01236:  
+ 01237:       (* 0063 - F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff *)
+ 01238:       EXV_SPS_0063   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff";DESC := "0##Application#Interruptor HV#Circuit break.#Position#open##1";}:IEXV_SPS_BO;
+ 01239:  
+ 01240:       (* 0064 - F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOn *)
+ 01241:       EXV_SPS_0064   {COMMENT := "F06_F002.Application.FG1_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOn";DESC := "0##Application#Interruptor HV#Circuit break.#Position#closed##1";}:IEXV_SPS_BO;
+ 01242:  
+ 01243:       (* 0065 - F06_F002.Application.FG1_Recording.FN1_Recorder_DEF.FB1_RDRE_DEF.StrExt *)
+ 01244:       EXV_SPS_0065   {COMMENT := "F06_F002.Application.FG1_Recording.FN1_Recorder_DEF.FB1_RDRE_DEF.StrExt";DESC := "0##Application#Recording#Fault recorder#Control#>External start##1";}:OEXV_BO_SPS;
+ 01245:  
+ 01246:       (* 0066 - F06_F002.Application.FG2_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOn *)
+ 01247:       EXV_SPS_0066   {COMMENT := "F06_F002.Application.FG2_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOn";DESC := "0##Application#Interruptor LV#Circuit break.#Position#closed##1";}:IEXV_SPS_BO;
+ 01248:  
+ 01249:       (* 0067 - F06_F002.Application.FG2_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff *)
+ 01250:       EXV_SPS_0067   {COMMENT := "F06_F002.Application.FG2_Breaker_3pol.FB1_XCBR.Pos.DPC_StatusOff";DESC := "0##Application#Interruptor LV#Circuit break.#Position#open##1";}:IEXV_SPS_BO;
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 31
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 01251:  
+ 01252:       (* 0068 - F06_F002.Application.FG2_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral *)
+ 01253:       EXV_SPS_0068   {COMMENT := "F06_F002.Application.FG2_Breaker_3pol.FB1_PTRC_Trip.Tr.ACTGeneral";DESC := "0##Application#Interruptor LV#Trip logic#Trip indication#general##1";}:IEXV_SPS_BO;
+ 01254:  
+ 01255:       (* 0069 - F06_F002.Application.FG1_UserDef.FB4_Universal.OpCls0 *)
+ 01256:       EXV_SPS_0069   {COMMENT := "F06_F002.Application.FG1_UserDef.FB4_Universal.OpCls0";DESC := "0##Application#Usuario#GGIO1#Cierre Manual Q0##1";}:IEXV_SPS_BO;
+ 01257:  
+ 01258:       (* 0070 - F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_FastUnrestrained.Inactive *)
+ 01259:       EXV_SPS_0070   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_FastUnrestrained.Inactive";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF fast#Inactive##1";}:IEXV_SPS_BO;
+ 01260:  
+ 01261:       (* 0071 - F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Inactive *)
+ 01262:       EXV_SPS_0071   {COMMENT := "F06_F002.Application.FG1_PowerTransformer.FN1_TransformerDiff.FB_TDIFF_Restrained.Inactive";DESC := "0##Application#Transformer diff. 1#87T diff. prot. 1#I-DIFF#Inactive##1";}:IEXV_SPS_BO;
+ 01263:  END_VAR
+ 01264:  
+ 01265:       EXV_SPS_0062        (LNK := 62);
+                                CHART_d861becd_f029_452c_b109_4922e0f15c5d:
+00000E4C  182A3E0062000000          MOVE.W    #62,98(DP)
+00000E54  04B10E00000062000000      VCALL     IEXV_SPS_BO,#98
+ 01266:  
+ 01267:       EXV_SPS_0063        (LNK := 63);
+00000E5E  182A3F006C000000          MOVE.W    #63,108(DP)
+00000E66  04B10E0000006C000000      VCALL     IEXV_SPS_BO,#108
+ 01268:  
+ 01269:       EXV_SPS_0064        (LNK := 64);
+00000E70  182A400076000000          MOVE.W    #64,118(DP)
+00000E78  04B10E00000076000000      VCALL     IEXV_SPS_BO,#118
+ 01270:  
+ 01271:       EXV_SPS_0066        (LNK := 66);
+00000E82  182A42008A000000          MOVE.W    #66,138(DP)
+00000E8A  04B10E0000008A000000      VCALL     IEXV_SPS_BO,#138
+ 01272:  
+ 01273:       EXV_SPS_0067        (LNK := 67);
+00000E94  182A430094000000          MOVE.W    #67,148(DP)
+00000E9C  04B10E00000094000000      VCALL     IEXV_SPS_BO,#148
+ 01274:  
+ 01275:       EXV_SPS_0068        (LNK := 68);
+00000EA6  182A44009E000000          MOVE.W    #68,158(DP)
+00000EAE  04B10E0000009E000000      VCALL     IEXV_SPS_BO,#158
+ 01276:  
+ 01277:       EXV_SPS_0069        (LNK := 69);
+00000EB8  182A4500A8000000          MOVE.W    #69,168(DP)
+00000EC0  04B10E000000A8000000      VCALL     IEXV_SPS_BO,#168
+ 01278:  
+ 01279:       EXV_SPS_0070        (LNK := 70);
+00000ECA  182A4600B2000000          MOVE.W    #70,178(DP)
+00000ED2  04B10E000000B2000000      VCALL     IEXV_SPS_BO,#178
+ 01280:  
+ 01281:       EXV_SPS_0071        (LNK := 71);
+00000EDC  182A4700BC000000          MOVE.W    #71,188(DP)
+00000EE4  04B10E000000BC000000      VCALL     IEXV_SPS_BO,#188
+ 01282:  
+ 01283:       R_TRIG_1            (CLK := EXV_SPS_0063.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) );
+00000EEE  18226E00000000000000      MOVE.W    110(DP),0(DP)
+00000EF8  04B15801000000000000      VCALL     R_TRIG,#0
+ 01284:  
+ 01285:       R_TRIG_2            (CLK := EXV_SPS_0064.VAL(* POSITION := -1*-1: SIZE := 36* -1:   *) );
+00000F02  18227800000008000000      MOVE.W    120(DP),8(DP)
+00000F0C  04B15801000008000000      VCALL     R_TRIG,#8
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 32
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 01286:  
+ 01287:       R_TRIG_3            (CLK := EXV_SPS_0066.VAL(* POSITION := -1*-1: SIZE := 36* -1:   *) );
+00000F16  18228C00000010000000      MOVE.W    140(DP),16(DP)
+00000F20  04B15801000010000000      VCALL     R_TRIG,#16
+ 01288:  
+ 01289:       R_TRIG_4            (CLK := EXV_SPS_0067.VAL(* POSITION := -1*-1: SIZE := 35* -1:   *) );
+00000F2A  18229600000018000000      MOVE.W    150(DP),24(DP)
+00000F34  04B15801000018000000      VCALL     R_TRIG,#24
+ 01290:  
+ 01291:       OR10_5              (X1 := R_TRIG_1.Q,
+00000F3E  18220200000020000000      MOVE.W    2(DP),32(DP)
+ 01292:                            X2 := R_TRIG_2.Q,
+00000F48  18220A00000022000000      MOVE.W    10(DP),34(DP)
+ 01293:                            X3 := R_TRIG_3.Q,
+00000F52  18221200000024000000      MOVE.W    18(DP),36(DP)
+ 01294:                            X4 := R_TRIG_4.Q,
+00000F5C  18221A00000026000000      MOVE.W    26(DP),38(DP)
+ 01295:                            X5 := EXV_SPS_0069.VAL(* POSITION := -1*-1: SIZE := 28* -1:   *) ,
+00000F66  1822AA00000028000000      MOVE.W    170(DP),40(DP)
+ 01296:                            X6 := 0,
+00000F70  182A00002A000000          MOVE.W    #0,42(DP)
+ 01297:                            X7 := 0,
+00000F78  182A00002C000000          MOVE.W    #0,44(DP)
+ 01298:                            X8 := 0,
+00000F80  182A00002E000000          MOVE.W    #0,46(DP)
+ 01299:                            X9 := 0,
+00000F88  182A000030000000          MOVE.W    #0,48(DP)
+ 01300:                            X10 := 0);
+00000F90  182A000032000000          MOVE.W    #0,50(DP)
+00000F98  04B19A00000020000000      VCALL     OR10,#32
+ 01301:  
+ 01302:       AND10_6             (X1 := OR10_5.Y,
+00000FA2  18223400000036000000      MOVE.W    52(DP),54(DP)
+ 01303:                            X2 := NOT EXV_SPS_0062.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+00000FAC  0E0264000000              LD.W      100(DP)
+00000FB2  4805                      NOT.W     AC
+00000FB4  3FA50100                  AND.W     AC,#1
+00000FB8  130238000000              ST.W      56(DP)
+ 01304:                            X3 := NOT EXV_SPS_0068.VAL(* POSITION := -1*-1: SIZE := 38* -1:   *) ,
+00000FBE  0E02A0000000              LD.W      160(DP)
+00000FC4  4805                      NOT.W     AC
+00000FC6  3FA50100                  AND.W     AC,#1
+00000FCA  13023A000000              ST.W      58(DP)
+ 01305:                            X4 := 1,
+00000FD0  182A01003C000000          MOVE.W    #1,60(DP)
+ 01306:                            X5 := 1,
+00000FD8  182A01003E000000          MOVE.W    #1,62(DP)
+ 01307:                            X6 := 1,
+00000FE0  182A010040000000          MOVE.W    #1,64(DP)
+ 01308:                            X7 := 1,
+00000FE8  182A010042000000          MOVE.W    #1,66(DP)
+ 01309:                            X8 := 1,
+00000FF0  182A010044000000          MOVE.W    #1,68(DP)
+ 01310:                            X9 := 1,
+00000FF8  182A010046000000          MOVE.W    #1,70(DP)
+ 01311:                            X10 := 1);
+00001000  182A010048000000          MOVE.W    #1,72(DP)
+00001008  04B14000000036000000      VCALL     AND10,#54
+ST-Compiler Version 4.52.01    Wed Jul 31 17:48:16 2024    Page 33
+File: 'C:\Users\anibal.gomez\OneDrive - INGENIERIA ESPECIALIZADA\POC HINCAPIÉ\POC_HINCAPIE\Project\SIEMENS\DIGSI\S012+R06_EN_CURSO_V18\TMP\CFC\7344242.43316\STComp.st'
+
+ 01312:  
+ 01313:       OR10_7              (X1 := EXV_SPS_0071.VAL(* POSITION := -1*-1: SIZE := 40* -1:   *) ,
+00001012  1822BE0000004C000000      MOVE.W    190(DP),76(DP)
+ 01314:                            X2 := EXV_SPS_0070.VAL(* POSITION := -1*-1: SIZE := 42* -1:   *) ,
+0000101C  1822B40000004E000000      MOVE.W    180(DP),78(DP)
+ 01315:                            X3 := 0,
+00001026  182A000050000000          MOVE.W    #0,80(DP)
+ 01316:                            X4 := 0,
+0000102E  182A000052000000          MOVE.W    #0,82(DP)
+ 01317:                            X5 := 0,
+00001036  182A000054000000          MOVE.W    #0,84(DP)
+ 01318:                            X6 := 0,
+0000103E  182A000056000000          MOVE.W    #0,86(DP)
+ 01319:                            X7 := 0,
+00001046  182A000058000000          MOVE.W    #0,88(DP)
+ 01320:                            X8 := 0,
+0000104E  182A00005A000000          MOVE.W    #0,90(DP)
+ 01321:                            X9 := 0,
+00001056  182A00005C000000          MOVE.W    #0,92(DP)
+ 01322:                            X10 := 0);
+0000105E  182A00005E000000          MOVE.W    #0,94(DP)
+00001066  04B19A0000004C000000      VCALL     OR10,#76
+ 01323:       EXV_SPS_0065        (LNK := 65,
+00001070  182A410080000000          MOVE.W    #65,128(DP)
+ 01324:                            VAL := AND10_6.Y(* POSITION := -1*-1: SIZE := 37* -1:   *) );
+00001078  18224A00000082000000      MOVE.W    74(DP),130(DP)
+00001082  04B11800000080000000      VCALL     OEXV_BO_SPS,#128
+ 01325:  
+ 01326:  (* COMMENT_TEXT;{X=62,Y=1};{Width=27, Height=5};Font := Arial,FontSize := 20,LineColor := 0,LineWidth := 0,Alignment := Center,AutoWrap := True,BackColor := -16738588,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;ARRANQUE OSCILOGRAFIA *)
+ 01327:  (* COMMENT_TEXT;{X=73,Y=26};{Width=19, Height=4};FontSize := 10,LineColor := 0,LineWidth := 0,Alignment := Near,AutoWrap := True,BackColor := 0,Background := False,TextColor := 0,WallpaperGamma := 100,PartitionID := 1,;BLOQUEO 87T REF *)
+ 01328:  
+ 01329:  END_PROGRAM
+0000108C  010A0000                  RETB      #0
+ 01330:  
+ 01331:  CONFIGURATION  PLC_CONTROL 
+ 01332:     RESOURCE PLANS { COMMENT := "Txt100_100";} ON CPU32
+ 01333:       TASK EVENT_SLOW     { TICKS := 1300;}(PRIORITY := INTERNAL);
+ 01334:       TASK EVENT_FAST     { TICKS := 255;}(PRIORITY := INTERNAL);
+ 01335:       TASK MEASUREMENT    { TICKS := 2536;}(PRIORITY := INTERNAL);
+ 01336:       TASK INTERLOCKING   { TICKS := 2173;}(PRIORITY := INTERNAL);
+ 01337:  
+ 01338:       PROGRAM FBI001 WITH EVENT_SLOW:  CHART_e25e9a5c_6746_4c2f_a7df_d855c15d8b2a;
+ 01339:       PROGRAM FBI002 WITH EVENT_SLOW:  CHART_ee3534f3_86dc_4136_8932_aad2f5b44fe1;
+ 01340:       PROGRAM FBI003 WITH EVENT_SLOW:  CHART_830e140f_4d28_49ac_9621_b61b6ef2ad33;
+ 01341:       PROGRAM FBI004 WITH EVENT_FAST:  CHART_fb64a5a6_930c_4c0b_8b68_ba5c24b5787b;
+ 01342:       PROGRAM FBI005 WITH EVENT_SLOW:  CHART_f9f39a58_b729_4fe4_acbc_feeb6b36c4c7;
+ 01343:       PROGRAM FBI006 WITH EVENT_SLOW:  CHART_f31921e5_3b60_4a9a_9f46_b5aa012ecf30;
+ 01344:       PROGRAM FBI007 WITH EVENT_SLOW:  CHART_d861becd_f029_452c_b109_4922e0f15c5d;
+ 01345:  
+ 01346:     END_RESOURCE
+ 01347:  
+ 01348:   END_CONFIGURATION                                    .END
+     
