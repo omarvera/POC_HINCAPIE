@@ -11,7 +11,7 @@
       <settingvalue xsi:type="xsd:boolean">false</settingvalue>
     </SettingInfo>
     <SettingInfo settingId="IsExpanded/{7344333-53112}">
-      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+      <settingvalue xsi:type="xsd:boolean">true</settingvalue>
     </SettingInfo>
     <SettingInfo settingId="IsExpanded/{7344334-53224}">
       <settingvalue xsi:type="xsd:boolean">false</settingvalue>
@@ -218,10 +218,25 @@
       <settingvalue xsi:type="xsd:int">100</settingvalue>
     </SettingInfo>
     <SettingInfo settingId="ScreenPositionX">
-      <settingvalue xsi:type="xsd:int">0</settingvalue>
+      <settingvalue xsi:type="xsd:int">1</settingvalue>
     </SettingInfo>
     <SettingInfo settingId="ScreenPositionY">
       <settingvalue xsi:type="xsd:int">0</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-95651}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-95819}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-96260}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344334-97664}">
+      <settingvalue xsi:type="xsd:boolean">false</settingvalue>
+    </SettingInfo>
+    <SettingInfo settingId="IsExpanded/{7344333-121911}">
+      <settingvalue xsi:type="xsd:boolean">true</settingvalue>
     </SettingInfo>
   </SettingSection>
 </DIGSISettingsConfigurationData>
