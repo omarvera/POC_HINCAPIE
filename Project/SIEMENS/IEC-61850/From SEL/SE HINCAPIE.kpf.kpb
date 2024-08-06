@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SyskonProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="Siemens.Digsi.Syskon">
+  <IEC61850Station>
+    <Name>SE HINCAPIE</Name>
+    <Edition>31000</Edition>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+  </IEC61850Station>
+  <IED>
+    <Name>RTAC_PRAL</Name>
+    <HierName>RTAC_PRAL</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>PP_6L1_SEC_IND</Name>
+    <HierName>PP_6L1_SEC_IND</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>PP_6L3_GUADALU</Name>
+    <HierName>PP_6L3_GUADALU</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>PP_6L5_PTA_BOMB</Name>
+    <HierName>PP_6L5_PTA_BOMB</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>PP_6T2_TRAFO</Name>
+    <HierName>PP_6T2_TRAFO</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>DPAC_6L1_SEC_IND</Name>
+    <HierName>DPAC_6L1_SEC_IND</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>DPAC_6L3_GUADALU</Name>
+    <HierName>DPAC_6L3_GUADALU</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>DPAC_6L5_PTA_BOMB</Name>
+    <HierName>DPAC_6L5_PTA_BOMB</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>DPAC_6T2_TRAFO</Name>
+    <HierName>DPAC_6T2_TRAFO</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>SEL_651R_CTO_47</Name>
+    <HierName>SEL_651R_CTO_47</HierName>
+    <IedId />
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>D:\Work\Guatemala\2024\POC_HINCAPIE\Project\SIEMENS\IEC-61850\From SEL\SE HINCAPIE.scd</Path>
+    <Date>2024-08-06T15:22:45.5023025-06:00</Date>
+    <NeedUpdate>true</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier />
+  </IED>
+  <IED>
+    <Name>F06_F002</Name>
+    <ObjectName>F06_F002</ObjectName>
+    <HierName>F06_F002</HierName>
+    <IedId>3eddfa3c-d537-4270-b1a7-924330895b25</IedId>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>C:\Users\Omar Vera\AppData\Local\Temp\xdcux5qr.vgi\F06_F002.iid</Path>
+    <Date>2024-08-06T15:22:34.7340514-06:00</Date>
+    <NeedUpdate>false</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier>D5</IEDToolIdentifier>
+  </IED>
+  <IED>
+    <Name>F06_F003</Name>
+    <ObjectName>F06_F003</ObjectName>
+    <HierName>F06_F003</HierName>
+    <IedId>421f17c4-7571-472b-b7e5-91360560a62e</IedId>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>C:\Users\Omar Vera\AppData\Local\Temp\xdcux5qr.vgi\F06_F003.iid</Path>
+    <Date>2024-08-06T15:22:30.0406359-06:00</Date>
+    <NeedUpdate>false</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier>D5</IEDToolIdentifier>
+  </IED>
+  <IED>
+    <Name>F06_BCU</Name>
+    <ObjectName>F06_BCU</ObjectName>
+    <HierName>F06_BCU</HierName>
+    <IedId>f8cd30b0-5a13-40a6-85b3-a7a5f9bc9229</IedId>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>C:\Users\Omar Vera\AppData\Local\Temp\xdcux5qr.vgi\F06_BCU.iid</Path>
+    <Date>2024-08-06T15:22:32.9445506-06:00</Date>
+    <NeedUpdate>false</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier>D5</IEDToolIdentifier>
+  </IED>
+  <IED>
+    <Name>F06_F004</Name>
+    <ObjectName>F06_F004</ObjectName>
+    <HierName>F06_F004</HierName>
+    <IedId>f5d2f7d6-a880-4579-9c9b-28577eb53e85</IedId>
+    <ObjectID>0</ObjectID>
+    <ObjectType>NotSpecified</ObjectType>
+    <Path>C:\Users\Omar Vera\AppData\Local\Temp\xdcux5qr.vgi\F06_F004.iid</Path>
+    <Date>2024-08-06T15:22:31.6415198-06:00</Date>
+    <NeedUpdate>false</NeedUpdate>
+    <NeedReimport>false</NeedReimport>
+    <ExplicitUserImport>true</ExplicitUserImport>
+    <IEDToolIdentifier>D5</IEDToolIdentifier>
+  </IED>
+  <GracefullyShutdown>true</GracefullyShutdown>
+  <ValidationNode>
+    <scdLastSavedDateTime>08/06/2024 15:22:49</scdLastSavedDateTime>
+  </ValidationNode>
+</SyskonProject>
