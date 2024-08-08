@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rec:RecordOverview xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iec.ch/61850/2003/SCL" xmlLanguage="DCL" xmlLanguageVersion="V09.80.02">
+   <rec:RecordInfo deviceName="S.E. HINCAPIE" deviceType="7UT85-JAAA-AA0-0AAAA0-AH0111-12111A-CBB000-000AC0-CC1BA1-CB1" deviceId="BM2206010534" recordType="DR" numberOfRecords="65"/>
+   <rec:RecordEntry number="58" faultNumber="58" gridFaultNumber="1" recordSize="572435">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 04:55:42.990999997 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1513" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00058.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00058.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00058.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="608" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00058.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00058.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="59" faultNumber="59" gridFaultNumber="1" recordSize="572196">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 04:58:01.752999961 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00059.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00059.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00059.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="593" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00059.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00059.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="60" faultNumber="60" gridFaultNumber="1" recordSize="572511">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 04:58:22.092999995 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00060.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00060.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00060.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="908" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00060.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00060.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="61" faultNumber="61" gridFaultNumber="1" recordSize="572196">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 04:59:16.842999995 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00061.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00061.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00061.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="593" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00061.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00061.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="62" faultNumber="62" gridFaultNumber="1" recordSize="572420">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 04:59:28.080999970 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00062.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00062.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00062.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="593" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00062.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00062.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="63" faultNumber="63" gridFaultNumber="1" recordSize="572420">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 04:59:55.265999973 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00063.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00063.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00063.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="593" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00063.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00063.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="64" faultNumber="64" gridFaultNumber="1" recordSize="572196">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:00:13.547999978 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00064.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00064.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00064.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="593" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00064.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00064.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="65" faultNumber="65" gridFaultNumber="1" recordSize="572526">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:02:05.203000009 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1497" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00065.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00065.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00065.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="923" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00065.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00065.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="66" faultNumber="66" gridFaultNumber="1" recordSize="572500">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:02:47.830999970 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1859" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00066.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00066.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00066.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="673" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00066.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00066.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="67" faultNumber="67" gridFaultNumber="1" recordSize="572411">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:02:59.940999985 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1151" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00067.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00067.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00067.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="648" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00067.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11869" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00067.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="68" faultNumber="68" gridFaultNumber="1" recordSize="572177">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:03:13.627999961 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1142" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00068.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00068.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00068.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="638" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00068.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11869" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00068.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="69" faultNumber="69" gridFaultNumber="1" recordSize="572375">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:03:21.298999965 +00:00 !L !F  N acc=31" durationTmms="4996000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1564" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00069.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559557" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00069.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00069.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="938" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00069.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11879" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00069.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="70" faultNumber="70" gridFaultNumber="1" recordSize="572417">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:03:31.055999994 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1711" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00070.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00070.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00070.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="648" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00070.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11875" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00070.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="71" faultNumber="71" gridFaultNumber="1" recordSize="342135">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:03:38.972999990 +00:00 !L !F  N acc=31" durationTmms="2945000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="2965" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00071.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="329509" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00071.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00071.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="748" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00071.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11877" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00071.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="72" faultNumber="72" gridFaultNumber="1" recordSize="572169">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:03:41.947999954 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1605" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00072.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00072.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00072.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="608" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00072.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11891" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00072.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="73" faultNumber="73" gridFaultNumber="1" recordSize="572529">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:03:53.440999985 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="4032" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00073.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00073.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00073.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="673" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00073.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11962" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00073.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="74" faultNumber="74" gridFaultNumber="1" recordSize="572425">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:04:06.930999994 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1141" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00074.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00074.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00074.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="598" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00074.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00074.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="75" faultNumber="75" gridFaultNumber="1" recordSize="572516">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:04:37.427999973 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1141" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00075.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00075.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00075.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="913" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00075.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00075.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="76" faultNumber="76" gridFaultNumber="1" recordSize="572740">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:06:13.085999966 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1141" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00076.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00076.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00076.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="913" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00076.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00076.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="77" faultNumber="77" gridFaultNumber="1" recordSize="572425">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:06:44.155999959 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="753" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00077.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00077.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00077.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="598" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00077.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00077.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="78" faultNumber="78" gridFaultNumber="1" recordSize="572230">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:07:25.203000009 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1529" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00078.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00078.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00078.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00078.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11932" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00078.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="79" faultNumber="79" gridFaultNumber="1" recordSize="572137">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:07:36.242999971 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1141" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00079.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00079.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00079.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="598" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00079.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11869" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00079.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="80" faultNumber="80" gridFaultNumber="1" recordSize="572499">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:07:57.018000007 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1333" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00080.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00080.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00080.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="953" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00080.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11876" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00080.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="81" faultNumber="81" gridFaultNumber="1" recordSize="572211">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:08:03.953000009 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="945" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00081.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00081.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00081.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="608" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00081.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00081.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="82" faultNumber="82" gridFaultNumber="1" recordSize="572455">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:08:16.986000001 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1529" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00082.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00082.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00082.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00082.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00082.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="83" faultNumber="83" gridFaultNumber="1" recordSize="572276">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:08:26.102999985 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="2683" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00083.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00083.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00083.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="673" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00083.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00083.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="84" faultNumber="84" gridFaultNumber="1" recordSize="572196">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:08:40.042999983 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00084.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00084.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00084.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="593" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00084.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00084.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="85" faultNumber="85" gridFaultNumber="1" recordSize="572201">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:08:54.567999959 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="2147" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00085.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00085.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00085.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="598" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00085.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00085.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="86" faultNumber="86" gridFaultNumber="1" recordSize="483253">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:12:27.717999995 +00:00 !L !F  N acc=31" durationTmms="4205000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="5575" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00086.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="470629" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00086.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00086.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="753" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00086.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11870" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00086.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="87" faultNumber="87" gridFaultNumber="1" recordSize="572789">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:14:12.111000001 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="5575" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00087.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00087.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00087.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="963" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00087.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11932" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00087.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="88" faultNumber="88" gridFaultNumber="1" recordSize="572251">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:15:57.597999990 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="4472" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00088.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00088.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00088.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="648" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00088.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00088.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="89" faultNumber="89" gridFaultNumber="1" recordSize="572448">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:16:41.342999995 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00089.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00089.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00089.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="908" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00089.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11870" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00089.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="90" faultNumber="90" gridFaultNumber="1" recordSize="572420">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:16:56.805999994 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00090.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00090.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00090.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="593" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00090.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00090.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="91" faultNumber="91" gridFaultNumber="1" recordSize="572526">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:17:31.242999971 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1489" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00091.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00091.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00091.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="923" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00091.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00091.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="92" faultNumber="92" gridFaultNumber="1" recordSize="572201">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:18:06.817999959 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="2244" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00092.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00092.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00092.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="598" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00092.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00092.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="93" faultNumber="93" gridFaultNumber="1" recordSize="572549">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:18:49.601000011 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="4559" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00093.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00093.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00093.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="693" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00093.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11962" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00093.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="94" faultNumber="94" gridFaultNumber="1" recordSize="572864">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:19:09.455999970 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="4559" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00094.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00094.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00094.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="1008" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00094.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11962" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00094.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="95" faultNumber="95" gridFaultNumber="1" recordSize="572352">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:20:37.402999997 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="6591" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00095.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00095.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00095.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="813" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00095.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11869" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00095.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="96" faultNumber="96" gridFaultNumber="1" recordSize="572955">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:21:38.640999973 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="6591" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="1128" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00096.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="97" faultNumber="97" gridFaultNumber="1" recordSize="572640">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:22:18.630999982 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="6591" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00097.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00097.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00097.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="813" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00097.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00097.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="98" faultNumber="98" gridFaultNumber="1" recordSize="476813">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:22:44.356000006 +00:00 !L !F  N acc=31" durationTmms="4147000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="4882" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00098.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="464133" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00098.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00098.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="718" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00098.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11961" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00098.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="99" faultNumber="99" gridFaultNumber="1" recordSize="572546">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:23:04.895999968 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="5575" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00099.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00099.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00099.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="753" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00099.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11899" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00099.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="100" faultNumber="100" gridFaultNumber="1" recordSize="572654">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:23:22.602999985 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="5575" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00100.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00100.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00100.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="1068" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00100.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11916" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00100.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="101" faultNumber="101" gridFaultNumber="1" recordSize="572310">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 05:24:51.568000019 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="5575" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00101.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00101.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00101.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="678" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00101.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11962" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00101.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="102" faultNumber="102" gridFaultNumber="1" recordSize="236587">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 06:08:52.635999978 +00:00 !L !F  N acc=31" durationTmms="2000000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="false" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00102.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224005" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00102.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00102.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00102.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11953" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00102.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="103" faultNumber="103" gridFaultNumber="1" recordSize="572507">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 06:52:56.843999982 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1768" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00103.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00103.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00103.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="903" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00103.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11934" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00103.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="104" faultNumber="104" gridFaultNumber="1" recordSize="236652">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 06:59:05.534999967 +00:00 !L !F  N acc=31" durationTmms="2000000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="false" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00104.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224061" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00104.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00104.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00104.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11962" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00104.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="105" faultNumber="105" gridFaultNumber="1" recordSize="572023">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:00:30.759000003 +00:00 !L !F  N acc=31" durationTmms="4996000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1768" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00105.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559501" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00105.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00105.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="588" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00105.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11933" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00105.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="106" faultNumber="106" gridFaultNumber="1" recordSize="236652">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:03:53.134999990 +00:00 !L !F  N acc=31" durationTmms="2000000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="false" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00106.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224061" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00106.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00106.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00106.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11962" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00106.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="107" faultNumber="107" gridFaultNumber="1" recordSize="572136">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:04:57.703000009 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1535" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00107.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559613" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00107.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00107.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="588" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00107.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11934" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00107.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="108" faultNumber="108" gridFaultNumber="1" recordSize="572136">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:06:54.402999997 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1535" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00108.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559613" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00108.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00108.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="588" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00108.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11934" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00108.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="109" faultNumber="109" gridFaultNumber="1" recordSize="236604">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:11:36.453999996 +00:00 !L !F  N acc=31" durationTmms="2000000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="false" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00109.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224005" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00109.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00109.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00109.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11970" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00109.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="110" faultNumber="110" gridFaultNumber="1" recordSize="237604">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:12:50.127999961 +00:00 !L !F  N acc=31" durationTmms="2012000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1173" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00110.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="225125" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00110.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00110.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="608" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00110.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11870" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00110.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="111" faultNumber="111" gridFaultNumber="1" recordSize="237716">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:13:14.359999955 +00:00 !L !F  N acc=31" durationTmms="2013000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1406" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00111.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224901" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00111.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00111.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="943" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00111.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11871" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00111.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="112" faultNumber="112" gridFaultNumber="1" recordSize="237444">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:13:51.894999981 +00:00 !L !F  N acc=31" durationTmms="2013000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1173" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00112.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224901" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00112.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00112.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="608" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00112.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11934" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00112.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="113" faultNumber="113" gridFaultNumber="1" recordSize="237912">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:14:10.170999944 +00:00 !L !F  N acc=31" durationTmms="2015000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1406" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00113.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="225349" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00113.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00113.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00113.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11934" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00113.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="114" faultNumber="114" gridFaultNumber="1" recordSize="572595">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:17:48.100999951 +00:00 !L !F  N acc=31" durationTmms="5000000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="2143" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00114.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="560005" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00114.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00114.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="618" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00114.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11971" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00114.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="115" faultNumber="115" gridFaultNumber="1" recordSize="572731">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:24:26.141999960 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1768" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00115.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00115.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00115.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="903" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00115.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11934" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00115.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="116" faultNumber="116" gridFaultNumber="1" recordSize="572416">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:27:24.217000008 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1535" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00116.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00116.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00116.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="588" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00116.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11934" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00116.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="117" faultNumber="117" gridFaultNumber="1" recordSize="572731">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:29:25.931999981 +00:00 !L !F  N acc=31" durationTmms="4999000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="1535" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00117.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559893" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00117.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00117.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="903" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00117.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11934" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00117.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="118" faultNumber="118" gridFaultNumber="1" recordSize="236596">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:42:56.625999987 +00:00 !L !F  N acc=31" durationTmms="2000000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="false" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00118.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224005" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00118.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00118.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00118.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11962" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00118.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="119" faultNumber="119" gridFaultNumber="1" recordSize="236596">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:49:22.436999977 +00:00 !L !F  N acc=31" durationTmms="2000000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="false" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00119.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224005" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00119.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00119.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00119.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11962" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00119.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="120" faultNumber="120" gridFaultNumber="1" recordSize="236660">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 07:56:47.618999958 +00:00 !L !F  N acc=31" durationTmms="2000000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="false" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="true" internalTriggered="false" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="733" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00120.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="224061" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00120.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00120.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="628" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00120.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11970" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00120.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="121" faultNumber="121" gridFaultNumber="1" recordSize="299493">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 08:05:01.273999989 +00:00 !L !F  N acc=31" durationTmms="2563000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="8349" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00121.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="286669" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00121.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00121.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="923" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00121.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11900" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00121.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+   <rec:RecordEntry number="122" faultNumber="122" gridFaultNumber="1" recordSize="572305">
+      <rec:RecordInfos>
+         <rec:RecordTime startTime="2011-01-03 08:07:16.251999974 +00:00 !L !F  N acc=31" durationTmms="4997000"/>
+         <rec:RecordStatusInfos generatedinTestMode="false" recordWithPickUp="false" recordWithTrip="true" recordDataSimulated="false"/>
+         <rec:RecordTrigger externalTriggered="false" internalTriggered="true" manualTriggered="false" commandTriggered="false"/>
+         <rec:RecordFile contentOfRecord="log" compress="0" fileSize="7677" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00122.log"/>
+         <rec:RecordFile contentOfRecord="smv" compress="0" fileSize="559613" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00122.smv"/>
+         <rec:RecordFile contentOfRecord="pmv" compress="0" fileSize="1" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00122.pmv"/>
+         <rec:RecordFile contentOfRecord="msg" compress="0" fileSize="728" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00122.msg"/>
+         <rec:RecordFile contentOfRecord="mti" compress="0" fileSize="11963" reserve="0" fileName="/dynfs/hd2/rcd/rcda/FRA00122.mti"/>
+      </rec:RecordInfos>
+   </rec:RecordEntry>
+</rec:RecordOverview>
+
